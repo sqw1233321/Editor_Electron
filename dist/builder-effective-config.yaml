@@ -1,0 +1,8 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.my.editor
+win:
+  target: nsis
+files: []
+electronVersion: 41.2.1
