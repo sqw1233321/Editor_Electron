@@ -1,12 +1,13 @@
 console.log("=== main.js 开始加载 ===");
 
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain,dialog } = require('electron');
 const path = require('path');
 
 function createWindow() {
     const win = new BrowserWindow({
         width: 7000,
         height: 7000,
+        // frame: false,          // 隐藏窗口边框和标题栏
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
             contextIsolation: true,
@@ -16,10 +17,10 @@ function createWindow() {
     });
     // 自动打开 DevTools
     win.webContents.openDevTools();
-    win.loadFile('build/web-desktop/index.html');
+    win.loadFile('cocos/NewMapEditor/build/web-desktop/index.html');
 }
 
-// IPC 处理文件写入
+//写文件
 ipcMain.handle('write-file', async (event, filePath, content) => {
     const fs = require('fs');
     const fullPath = path.resolve(filePath);
@@ -39,14 +40,24 @@ ipcMain.handle('write-file', async (event, filePath, content) => {
         return { success: false, error: error.message };
     }
 });
-// IPC 处理文件读取
-ipcMain.handle('read-file', async (event, filePath) => {
-    try {
-        const content = fs.readFileSync(filePath, 'utf8');
-        return { success: true, content };
-    } catch (err) {
-        return { success: false, error: err.message };
+
+//读取文件
+ipcMain.handle('open-file-dialog', async () => {
+    const result = await dialog.showOpenDialog({
+        properties: ['openFile'],
+        defaultPath: path.join(__dirname, 'assets/mapDat'),
+        filters: [{ name: 'JSON Files', extensions: ['json'] }]
+    });
+    
+    if (result.canceled) {
+        return { success: false };
     }
+    
+    const filePath = result.filePaths[0];
+    const fs = require('fs');
+    const content = fs.readFileSync(filePath, 'utf-8');
+    
+    return { success: true, path: filePath, content };
 });
 
 app.whenReady().then(createWindow);
