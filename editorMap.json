@@ -1,6 +1,9 @@
 [
     {
         "mapDta": "Level1",
-        "mapBg": "level1"
+        "mapBg": "01",
+        "areaNumber": 1,
+        "areaOffset": 4000,
+        "areaSize": "2906|3654"
     }
 ]
