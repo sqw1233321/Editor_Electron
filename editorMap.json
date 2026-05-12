@@ -47,5 +47,12 @@
         "areaNumber": 2,
         "areaOffset": 4000,
         "areaSize": "3480|3807"
+    },
+    {
+        "mapDta": "Level11",
+        "mapBg": "level6",
+        "areaNumber": 2,
+        "areaOffset": 4000,
+        "areaSize": "2905|3654"
     }
 ]
