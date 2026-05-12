@@ -9,9 +9,9 @@
     {
         "mapDta": "Level2",
         "mapBg": "level2",
-        "areaNumber": 0,
+        "areaNumber": 1,
         "areaOffset": 4000,
-        "areaSize": "2906|3654"
+        "areaSize": "8715|3654"
     },
     {
         "mapDta": "Level3",
@@ -40,5 +40,12 @@
         "areaNumber": 2,
         "areaOffset": 4000,
         "areaSize": "2905|3654"
+    },
+    {
+        "mapDta": "Level10",
+        "mapBg": "level5",
+        "areaNumber": 2,
+        "areaOffset": 4000,
+        "areaSize": "3480|3807"
     }
 ]
