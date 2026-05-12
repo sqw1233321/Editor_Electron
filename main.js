@@ -87,8 +87,10 @@ ipcMain.handle('select-atlas-folder', async () => {
     if (result.canceled || !result.filePaths[0]) {
         return { success: false };
     }
-
-    return { success: true, path: result.filePaths[0] };
+    const fileName = result.filePaths[0].split("\\").pop();
+    console.log("select: ", fileName);
+    //修改
+    return { success: true, path: fileName };
 });
 
 // 读取文件夹下所有子文件夹名称（各个区域）
@@ -106,49 +108,6 @@ ipcMain.handle('read-atlas-subfolders', async (event, parentPath) => {
     }
 });
 
-// 将图集复制到 Cocos resources 目录，并返回区域列表
-ipcMain.handle('import-atlas-to-resources', async (event, sourceFolder) => {
-    const fs = require('fs');
-    const destDir = path.join(__dirname, 'cocos/NewMapEditor/assets/resources/levelBg');
-
-    try {
-        // 确保目标目录存在
-        if (!fs.existsSync(destDir)) {
-            fs.mkdirSync(destDir, { recursive: true });
-        }
-
-        // 读取源文件夹的子文件夹
-        const entries = fs.readdirSync(sourceFolder, { withFileTypes: true });
-        const subfolders = entries.filter(e => e.isDirectory());
-
-        const areas = [];
-
-        for (const sub of subfolders) {
-            const srcPath = path.join(sourceFolder, sub.name);
-            const destPath = path.join(destDir, sub.name);
-
-            fs.mkdirSync(destPath, { recursive: true });
-
-            const files = fs.readdirSync(srcPath);
-            const imageFiles = files.filter(f => /\.(jpg|jpeg|png)$/i.test(f));
-
-            for (const file of imageFiles) {
-                fs.copyFileSync(path.join(srcPath, file), path.join(destPath, file));
-            }
-
-            areas.push({
-                name: sub.name,
-                imageCount: imageFiles.length
-            });
-        }
-
-        console.log('图集导入成功，区域列表:', areas);
-        return { success: true, areas };
-    } catch (error) {
-        console.error('图集导入失败:', error.message);
-        return { success: false, error: error.message };
-    }
-});
 
 // 写入 editorMap.json
 ipcMain.handle('save-editor-map-json', async (event, jsonContent) => {
@@ -177,30 +136,33 @@ ipcMain.handle('read-editor-map-json', async () => {
 // 读取某个区域文件夹下的所有图片，返回 base64 数据
 ipcMain.handle('load-area-images', async (event, areaName) => {
     const fs = require('fs');
-    const baseDir = path.join(__dirname, 'cocos/NewMapEditor/assets/resources/levelBg');
+    const baseDir = path.join(__dirname, 'levelBg');
     const areaDir = path.join(baseDir, areaName);
-
     try {
         if (!fs.existsSync(areaDir)) {
             return { success: false, error: `区域目录不存在: ${areaDir}` };
         }
 
-        const files = fs.readdirSync(areaDir)
-            .filter(f => /\.(jpg|jpeg|png)$/i.test(f))
-            .sort();
-
-        const images = files.map(fileName => {
-            const filePath = path.join(areaDir, fileName);
-            const buffer = fs.readFileSync(filePath);
-            const base64 = buffer.toString('base64');
-            const ext = fileName.split('.').pop().toLowerCase();
-            const mimeType = ext === 'png' ? 'image/png' : 'image/jpeg';
-            return {
-                name: fileName,
-                data: `data:${mimeType};base64,${base64}`
-            };
+        let images = [];
+        const files = fs.readdirSync(areaDir);
+        files.forEach(file => {
+            console.log('file', file);
+            const fileDir = path.join(areaDir, file);
+            const singleImages = [];
+            fs.readdirSync(fileDir).forEach(fileName => {
+                const fullPath = path.join(fileDir, fileName);  // 完整路径
+                console.log('filePath', fullPath);
+                const buffer = fs.readFileSync(fullPath);  // 使用完整路径
+                const base64 = buffer.toString('base64');
+                const ext = fileName.split('.').pop().toLowerCase();
+                const mimeType = ext === 'png' ? 'image/png' : 'image/jpeg';
+                singleImages.push({
+                    name: fileName,  // 这里是 fileName，没问题
+                    data: `data:${mimeType};base64,${base64}`
+                });
+            });
+            images.push(singleImages);
         });
-
         return { success: true, images };
     } catch (error) {
         return { success: false, error: error.message };

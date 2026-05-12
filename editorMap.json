@@ -1,9 +1,44 @@
 [
     {
         "mapDta": "Level1",
-        "mapBg": "01",
-        "areaNumber": 1,
+        "mapBg": "level1",
+        "areaNumber": 2,
         "areaOffset": 4000,
         "areaSize": "2906|3654"
+    },
+    {
+        "mapDta": "Level2",
+        "mapBg": "level2",
+        "areaNumber": 0,
+        "areaOffset": 4000,
+        "areaSize": "2906|3654"
+    },
+    {
+        "mapDta": "Level3",
+        "mapBg": "level3",
+        "areaNumber": 1,
+        "areaOffset": 4000,
+        "areaSize": "2900|3500"
+    },
+    {
+        "mapDta": "Level4",
+        "mapBg": "level4",
+        "areaNumber": 1,
+        "areaOffset": 4000,
+        "areaSize": "2905|3760"
+    },
+    {
+        "mapDta": "Level5",
+        "mapBg": "level5",
+        "areaNumber": 2,
+        "areaOffset": 4000,
+        "areaSize": "3480|3807"
+    },
+    {
+        "mapDta": "Level6",
+        "mapBg": "level6",
+        "areaNumber": 2,
+        "areaOffset": 4000,
+        "areaSize": "2905|3654"
     }
 ]
