@@ -93,22 +93,6 @@ ipcMain.handle('select-atlas-folder', async () => {
     return { success: true, path: fileName };
 });
 
-// 读取文件夹下所有子文件夹名称（各个区域）
-ipcMain.handle('read-atlas-subfolders', async (event, parentPath) => {
-    const fs = require('fs');
-    try {
-        const entries = fs.readdirSync(parentPath, { withFileTypes: true });
-        const subfolders = entries
-            .filter(e => e.isDirectory())
-            .map(e => e.name)
-            .sort();
-        return { success: true, subfolders };
-    } catch (error) {
-        return { success: false, error: error.message };
-    }
-});
-
-
 // 写入 editorMap.json
 ipcMain.handle('save-editor-map-json', async (event, jsonContent) => {
     const fs = require('fs');
