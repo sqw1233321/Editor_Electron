@@ -57,10 +57,10 @@
     },
     {
         "mapDta": "Level12",
-        "mapBg": "level4",
+        "mapBg": "level2",
         "areaNumber": 1,
         "areaOffset": 4000,
-        "areaSize": "2|2"
+        "areaSize": "6|2"
     },
     {
         "mapDta": "Level1_temp",
@@ -68,5 +68,26 @@
         "areaNumber": 2,
         "areaOffset": 4000,
         "areaSize": "2906|3654"
+    },
+    {
+        "mapDta": "Level_guide",
+        "mapBg": "level1",
+        "areaNumber": 2,
+        "areaOffset": 4000,
+        "areaSize": "2|2"
+    },
+    {
+        "mapDta": "Level20",
+        "mapBg": "恶魔城地图123",
+        "areaNumber": 3,
+        "areaOffset": 4000,
+        "areaSize": "2|2"
+    },
+    {
+        "mapDta": "Level17",
+        "mapBg": "海底沉船_二周目",
+        "areaNumber": 2,
+        "areaOffset": 4000,
+        "areaSize": "2|2"
     }
 ]
