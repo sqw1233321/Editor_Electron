@@ -89,5 +89,19 @@
         "areaNumber": 2,
         "areaOffset": 4000,
         "areaSize": "2|2"
+    },
+    {
+        "mapDta": "Level7",
+        "mapBg": "海底沉船一周目",
+        "areaNumber": 2,
+        "areaOffset": 4000,
+        "areaSize": "2|2"
+    },
+    {
+        "mapDta": "Level16",
+        "mapBg": "level6",
+        "areaNumber": 2,
+        "areaOffset": 4000,
+        "areaSize": "2|2"
     }
 ]
