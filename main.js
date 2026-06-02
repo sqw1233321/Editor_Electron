@@ -24,7 +24,11 @@ const editorPath = "cocos/web-desktop"
 //=============启动流程================
 //加载
 app.whenReady().then(async () => {
-    await hotUpdate();
+    const isDebug = process.env.IS_DEBUG === 'true';
+    //debug模式不拉去服务器包,本地包用来调试
+    if (!isDebug) {
+        await hotUpdate();
+    }
     createWindow();
 });
 
@@ -169,7 +173,7 @@ ipcMain.handle('write-file', async (event, fileName, content) => {
     }
 });
 
-//读取文件
+//打开文件选择
 ipcMain.handle('open-file-dialog', async () => {
     const result = await dialog.showOpenDialog({
         properties: ['openFile'],
@@ -201,6 +205,19 @@ ipcMain.handle('create-file', async (event, fileName, jsonContent) => {
     }
     return { success: true, path: fullPath };
 });
+
+//写入文件(ex:'editorMap.json')
+ipcMain.handle('get-file', async (event, filePath) => {
+    console.log(filePath);
+    const fs = require('fs');
+    const fullPath = path.join(__dirname, filePath);
+    try {
+        const content = fs.readFileSync(fullPath, 'utf-8');
+        return { success: true, content };
+    } catch (error) {
+        return { success: false, error: error.message };
+    }
+})
 
 // ==================== 图集相关 IPC ====================
 

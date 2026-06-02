@@ -1,0 +1,204 @@
+[
+    {
+        "ClassName": "Room",
+        "ExportName": "rooms",
+        "Texture": "",
+        "Color": "#582D2DBB",
+        "Name": "房间",
+        "iconSize": [
+            50,
+            50
+        ],
+        "itemSize": [
+            50,
+            50
+        ],
+        "itemAnchor": [
+            0,
+            0
+        ],
+        "script": "MapDrawRoom",
+        "cameraGroupIndex": 0
+    },
+    {
+        "ClassName": "PathPoint",
+        "ExportName": "pathPoints",
+        "Texture": "",
+        "Color": "#FF0000",
+        "Name": "路径点",
+        "iconSize": [
+            50,
+            50
+        ],
+        "itemSize": [
+            20,
+            20
+        ],
+        "itemAnchor": [
+            0.5,
+            0.5
+        ],
+        "script": "MapDrawP",
+        "cameraGroupIndex": 2
+    },
+    {
+        "ClassName": "Door",
+        "ExportName": "doors",
+        "Texture": "door",
+        "Name": "门",
+        "iconScale": 0.4,
+        "itemAnchor": [
+            0.5,
+            0
+        ],
+        "cameraGroupIndex": 0
+    },
+    {
+        "ClassName": "Ladder",
+        "ExportName": "ladders",
+        "Texture": "ladder",
+        "Name": "梯子",
+        "iconScale": 0.5,
+        "script": "MapDrawLadder",
+        "itemAnchor": [
+            0.5,
+            0
+        ],
+        "cameraGroupIndex": 0
+    },
+    {
+        "ClassName": "EnemyRefresh",
+        "ExportName": "enemyRefreshDatas",
+        "Texture": "",
+        "Color": "#000000",
+        "Name": "敌人刷新点",
+        "iconSize": [
+            50,
+            50
+        ],
+        "itemSize": [
+            50,
+            50
+        ],
+        "itemAnchor": [
+            0.5,
+            0.5
+        ],
+        "cameraGroupIndex": 0
+    },
+    {
+        "ClassName": "SearchPoint",
+        "ExportName": "searchItemDatas",
+        "Texture": "searchItem",
+        "Name": "搜索点",
+        "iconScale": 0.7,
+        "itemScale": 0.7,
+        "itemAnchor": [
+            0.5,
+            0.5
+        ],
+        "cameraGroupIndex": 0
+    },
+    {
+        "ClassName": "SurviveDat",
+        "ExportName": "survivorDatas",
+        "Texture": "survive",
+        "Name": "游魂",
+        "iconScale": 0.15,
+        "itemScale": 0.25,
+        "itemAnchor": [
+            0.5,
+            0
+        ],
+        "cameraGroupIndex": 0
+    },
+    {
+        "ClassName": "FightSoul",
+        "ExportName": "fightSoulDatas",
+        "Texture": "fightSoul",
+        "Name": "战魂",
+        "iconScale": 0.12,
+        "itemScale": 0.2,
+        "itemAnchor": [
+            0.5,
+            0
+        ],
+        "cameraGroupIndex": 0
+    },
+    {
+        "ClassName": "Portal",
+        "uniqueType": 0,
+        "ExportName": "portalDatas",
+        "Color": "#0F00FF",
+        "Name": "通用传送门",
+        "iconSize": [
+            50,
+            50
+        ],
+        "itemSize": [
+            50,
+            50
+        ],
+        "itemAnchor": [
+            0.5,
+            0.5
+        ],
+        "cameraGroupIndex": 0
+    },
+    {
+        "ClassName": "Portal",
+        "uniqueType": 1,
+        "ExportName": "portalDatas",
+        "Name": "掉落传送门",
+        "Texture": "dropProtal",
+        "iconScale": 0.3,
+        "itemScale": 1,
+        "itemAnchor": [
+            0.5,
+            0.5
+        ],
+        "cameraGroupIndex": 0
+    },
+    {
+        "ClassName": "Portal",
+        "uniqueType": 2,
+        "ExportName": "portalDatas",
+        "Name": "船",
+        "Texture": "ship",
+        "iconScale": 0.25,
+        "itemScale": 1,
+        "itemAnchor": [
+            0.5,
+            0.5
+        ],
+        "cameraGroupIndex": 0
+    },
+    {
+        "ClassName": "Portal",
+        "uniqueType": 3,
+        "ExportName": "portalDatas",
+        "Texture": "aijiPortal",
+        "Name": "埃及传送门",
+        "iconScale": 0.18,
+        "itemScale": 0.3,
+        "itemAnchor": [
+            0.5,
+            0.5
+        ],
+        "cameraGroupIndex": 0
+    },
+    {
+        "ClassName": "Portal",
+        "uniqueType": 4,
+        "ExportName": "portalDatas",
+        "Name": "玛雅传送门",
+        "Texture": "mayaPortal",
+        "iconScale": 0.3,
+        "itemScale": 0.7,
+        "itemAnchor": [
+            0.5,
+            0.5
+        ],
+        "cameraGroupIndex": 0
+    }
+]
