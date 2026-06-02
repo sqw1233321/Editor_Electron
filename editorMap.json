@@ -103,5 +103,19 @@
         "areaNumber": 2,
         "areaOffset": 4000,
         "areaSize": "2|2"
+    },
+    {
+        "mapDta": "Level18",
+        "mapBg": "玛雅玉林二周目",
+        "areaNumber": 2,
+        "areaOffset": 4000,
+        "areaSize": "2|2"
+    },
+    {
+        "mapDta": "Level19",
+        "mapBg": "level19",
+        "areaNumber": 2,
+        "areaOffset": 4000,
+        "areaSize": "2|2"
     }
 ]

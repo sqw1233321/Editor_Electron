@@ -1,0 +1,619 @@
+{
+	"size": { "width": "2906", "height": "7500" },
+	"pathPoints": [
+		{ "id": "P0_0", "roomId": 8800, "pos": { "x": -545.64, "y": -1442.02 }, "links": ["P0_1"] },
+		{ "id": "P0_1", "roomId": 8800, "pos": { "x": -376.39, "y": -1442.86 }, "links": ["P1_3", "P0_0", "P0_2"] },
+		{ "id": "P0_2", "roomId": 8800, "pos": { "x": -199.32, "y": -1442.02 }, "links": ["P0_3", "P0_1"] },
+		{ "id": "P0_3", "roomId": 8800, "pos": { "x": -41.62, "y": -1442.02 }, "links": ["P0_2"] },
+		{ "id": "P1_0", "roomId": 8811, "pos": { "x": -1225.14, "y": -1054.41 }, "links": ["P1_1"] },
+		{ "id": "P1_1", "roomId": 8811, "pos": { "x": -725.97, "y": -1056.39 }, "links": ["P1_0", "P1_2"] },
+		{ "id": "P1_2", "roomId": 8812, "pos": { "x": -490.38, "y": -1056.38 }, "links": ["P1_1", "P1_3"] },
+		{ "id": "P1_3", "roomId": 8812, "pos": { "x": -376.39, "y": -1056.38 }, "links": ["P0_1", "P1_4", "P1_2"] },
+		{ "id": "P1_4", "roomId": 8812, "pos": { "x": -40.44, "y": -1056.38 }, "links": ["P1_3", "P1_5"] },
+		{ "id": "P1_5", "roomId": 8813, "pos": { "x": 661.33, "y": -1056.39 }, "links": ["P1_4", "P1_6"] },
+		{ "id": "P1_6", "roomId": 8814, "pos": { "x": 826.08, "y": -1056.39 }, "links": ["P1_7", "P1_5"] },
+		{ "id": "P1_7", "roomId": 8814, "pos": { "x": 1185.85, "y": -1056.39 }, "links": ["P2_1", "P1_8", "P1_6"] },
+		{ "id": "P1_8", "roomId": 8814, "pos": { "x": 1294.47, "y": -1056.39 }, "links": ["P1_7"] },
+		{ "id": "P2_0", "roomId": 8815, "pos": { "x": -1413.89, "y": -666.24 }, "links": ["P2_1"] },
+		{ "id": "P2_1", "roomId": 8815, "pos": { "x": 1185.85, "y": -666.24 }, "links": ["P2_0", "P1_7", "P2_2"] },
+		{ "id": "P2_2", "roomId": 8815, "pos": { "x": 1403.74, "y": -666.24 }, "links": ["P2_1"] },
+		{ "id": "P3_0", "roomId": 8821, "pos": { "x": -1420.69, "y": 222.61 }, "links": ["P3_1"] },
+		{ "id": "P3_1", "roomId": 8821, "pos": { "x": -1228.3, "y": 222.61 }, "links": ["P3_2", "P3_0"] },
+		{ "id": "P3_2", "roomId": 8821, "pos": { "x": -719.81, "y": 222.61 }, "links": ["P3_3", "P3_1"] },
+		{ "id": "P3_3", "roomId": 8821, "pos": { "x": -454.77, "y": 222.61 }, "links": ["P3_4", "P3_2"] },
+		{ "id": "P3_4", "roomId": 8822, "pos": { "x": -334.42, "y": 222.61 }, "links": ["P3_3", "P3_5", "P4_1"] },
+		{ "id": "P3_5", "roomId": 8822, "pos": { "x": -40.07, "y": 222.61 }, "links": ["P3_4", "P3_6"] },
+		{ "id": "P3_6", "roomId": 8823, "pos": { "x": 163.58, "y": 222.61 }, "links": ["P3_5", "P3_7"] },
+		{ "id": "P3_7", "roomId": 8824, "pos": { "x": 654.4, "y": 222.61 }, "links": ["P3_6", "P3_8"] },
+		{ "id": "P3_8", "roomId": 8824, "pos": { "x": 860.25, "y": 222.61 }, "links": ["P3_7", "P3_9"] },
+		{ "id": "P3_9", "roomId": 8824, "pos": { "x": 1115.03, "y": 222.61 }, "links": ["P3_8", "P3_10"] },
+		{ "id": "P3_10", "roomId": 8824, "pos": { "x": 1292.08, "y": 222.61 }, "links": ["P3_9"] },
+		{ "id": "P4_0", "roomId": 8831, "pos": { "x": -569.03, "y": 610.58 }, "links": ["P4_1"] },
+		{ "id": "P4_1", "roomId": 8831, "pos": { "x": -334.42, "y": 610.58 }, "links": ["P4_0", "P4_2", "P3_4"] },
+		{ "id": "P4_2", "roomId": 8831, "pos": { "x": -40.34, "y": 610.58 }, "links": ["P4_3", "P4_1"] },
+		{ "id": "P4_3", "roomId": 8832, "pos": { "x": 146.04, "y": 610.58 }, "links": ["P4_2", "P4_4"] },
+		{ "id": "P4_4", "roomId": 8832, "pos": { "x": 641.07, "y": 610.58 }, "links": ["P4_3"] },
+		{ "id": "P5_0", "roomId": 8841, "pos": { "x": -531.15, "y": 2690.89 }, "links": ["P5_1"] },
+		{ "id": "P5_1", "roomId": 8841, "pos": { "x": -428.22, "y": 2690.89 }, "links": ["P6_1", "P5_0", "P5_2"] },
+		{ "id": "P5_2", "roomId": 8841, "pos": { "x": -207.85, "y": 2690.89 }, "links": ["P5_1", "P5_3"] },
+		{ "id": "P5_3", "roomId": 8841, "pos": { "x": -18.94, "y": 2690.89 }, "links": ["P5_2"] },
+		{ "id": "P5_4", "roomId": 8842, "pos": { "x": 854.97, "y": 2689.62 }, "links": ["P5_6"] },
+		{ "id": "P5_5", "roomId": 8842, "pos": { "x": 1313.74, "y": 2977.27 }, "links": ["P6_8", "P5_6"] },
+		{ "id": "P5_6", "roomId": 8842, "pos": { "x": 1313.74, "y": 2689.62 }, "links": ["P5_4", "P5_7", "P5_5"] },
+		{ "id": "P5_7", "roomId": 8842, "pos": { "x": 1408.55, "y": 2689.62 }, "links": ["P5_6"] },
+		{ "id": "P6_0", "roomId": 8851, "pos": { "x": -524.23, "y": 3096.23 }, "links": ["P6_1"] },
+		{ "id": "P6_1", "roomId": 8851, "pos": { "x": -428.22, "y": 3096.23 }, "links": ["P6_0", "P5_1", "P6_2"] },
+		{ "id": "P6_2", "roomId": 8851, "pos": { "x": -7.41, "y": 3096.23 }, "links": ["P6_1", "P6_3"] },
+		{ "id": "P6_3", "roomId": 8852, "pos": { "x": 207.44, "y": 3096.23 }, "links": ["P6_2", "P6_4"] },
+		{ "id": "P6_4", "roomId": 8852, "pos": { "x": 682, "y": 3096.23 }, "links": ["P6_3", "P6_5"] },
+		{ "id": "P6_5", "roomId": 8853, "pos": { "x": 936.51, "y": 3096.23 }, "links": ["P6_4", "P6_6"] },
+		{ "id": "P6_6", "roomId": 8853, "pos": { "x": 1070.5, "y": 3096.23 }, "links": ["P6_5", "P6_7"] },
+		{ "id": "P6_7", "roomId": 8853, "pos": { "x": 1219.55, "y": 3096.23 }, "links": ["P6_8", "P7_5", "P6_6"] },
+		{ "id": "P6_8", "roomId": 8853, "pos": { "x": 1313.74, "y": 3096.23 }, "links": ["P6_9", "P5_5", "P6_7"] },
+		{ "id": "P6_9", "roomId": 8853, "pos": { "x": 1388.2, "y": 3096.23 }, "links": ["P6_8"] },
+		{ "id": "P7_0", "roomId": 8861, "pos": { "x": -1230.1, "y": 3480.2 }, "links": ["P7_1"] },
+		{ "id": "P7_1", "roomId": 8861, "pos": { "x": -1129.96, "y": 3480.2 }, "links": ["P7_0", "P8_1", "P7_2"] },
+		{ "id": "P7_2", "roomId": 8861, "pos": { "x": -708.15, "y": 3480.2 }, "links": ["P7_3", "P7_1"] },
+		{ "id": "P7_3", "roomId": 8862, "pos": { "x": -526.36, "y": 3480.2 }, "links": ["P7_2", "P7_4"] },
+		{ "id": "P7_4", "roomId": 8862, "pos": { "x": 666.47, "y": 3480.2 }, "links": ["P7_5", "P7_3"] },
+		{ "id": "P7_5", "roomId": 8862, "pos": { "x": 1219.55, "y": 3480.2 }, "links": ["P7_6", "P6_7", "P7_4"] },
+		{ "id": "P7_6", "roomId": 8862, "pos": { "x": 1402.86, "y": 3480.2 }, "links": ["P7_5"] },
+		{ "id": "P8_0", "roomId": 8871, "pos": { "x": -1216.97, "y": 3876.37 }, "links": ["P8_1"] },
+		{ "id": "P8_1", "roomId": 8871, "pos": { "x": -1122.85, "y": 3876.37 }, "links": ["P8_2", "P8_0", "P7_1"] },
+		{ "id": "P8_2", "roomId": 8871, "pos": { "x": -714.22, "y": 3876.37 }, "links": ["P8_3", "P8_1"] },
+		{ "id": "P8_3", "roomId": 8872, "pos": { "x": -529.56, "y": 3876.37 }, "links": ["P8_4", "P8_2"] },
+		{ "id": "P8_4", "roomId": 8872, "pos": { "x": -196.66, "y": 3876.37 }, "links": ["P8_5", "P8_3", "P9_2"] },
+		{ "id": "P8_5", "roomId": 8872, "pos": { "x": -12.74, "y": 3876.37 }, "links": ["P8_6", "P8_4"] },
+		{ "id": "P8_6", "roomId": 8873, "pos": { "x": 171.37, "y": 3876.37 }, "links": ["P8_7", "P8_5"] },
+		{ "id": "P8_7", "roomId": 8873, "pos": { "x": 600.54, "y": 3876.37 }, "links": ["P8_8", "P8_6", "P9_6"] },
+		{ "id": "P8_8", "roomId": 8873, "pos": { "x": 668.99, "y": 3876.37 }, "links": ["P8_7", "P8_9"] },
+		{ "id": "P8_9", "roomId": 8874, "pos": { "x": 902.44, "y": 3876.37 }, "links": ["P8_8", "P8_10"] },
+		{ "id": "P8_10", "roomId": 8874, "pos": { "x": 1151.63, "y": 3876.37 }, "links": ["P8_9", "P8_11"] },
+		{ "id": "P8_11", "roomId": 8874, "pos": { "x": 1398.34, "y": 3876.37 }, "links": ["P8_10"] },
+		{ "id": "P9_0", "roomId": 8881, "pos": { "x": -544.76, "y": 4274.72 }, "links": ["P9_1"] },
+		{ "id": "P9_1", "roomId": 8881, "pos": { "x": -196.66, "y": 4274.72 }, "links": ["P9_0", "P9_2", "P9_3"] },
+		{ "id": "P9_2", "roomId": 8881, "pos": { "x": -196.66, "y": 4142.61 }, "links": ["P9_1", "P8_4"] },
+		{ "id": "P9_3", "roomId": 8881, "pos": { "x": -10.21, "y": 4274.72 }, "links": ["P9_1", "P9_4"] },
+		{ "id": "P9_4", "roomId": 8882, "pos": { "x": 298.56, "y": 4274.72 }, "links": ["P10_1", "P9_5", "P9_3"] },
+		{ "id": "P9_5", "roomId": 8882, "pos": { "x": 600.54, "y": 4274.72 }, "links": ["P9_4", "P9_7", "P9_6"] },
+		{ "id": "P9_6", "roomId": 8882, "pos": { "x": 600.54, "y": 4156.94 }, "links": ["P9_5", "P8_7"] },
+		{ "id": "P9_7", "roomId": 8882, "pos": { "x": 681.46, "y": 4274.72 }, "links": ["P9_5"] },
+		{ "id": "P10_0", "roomId": 8891, "pos": { "x": -408.18, "y": 4654.1 }, "links": ["P10_1"] },
+		{ "id": "P10_1", "roomId": 8891, "pos": { "x": 298.56, "y": 4654.1 }, "links": ["P10_0", "P10_2", "P9_4"] },
+		{ "id": "P10_2", "roomId": 8891, "pos": { "x": 458.82, "y": 4654.1 }, "links": ["P10_1"] }
+	],
+	"rooms": [
+		{
+			"cfgId": 8800,
+			"layer": 1,
+			"pos": { "x": -671.82, "y": -1488.57 },
+			"size": { "width": 700, "height": 380 },
+			"pathPointIds": ["P0_0", "P0_1", "P0_2", "P0_3"],
+			"unlockPointIds": [],
+			"doors": [],
+			"ladders": [
+				{ "roomId": 8800, "pos": { "x": -376.39, "y": -1442.86 }, "bindPointIds": ["P0_1", "P1_3"], "unlockMethod": 0, "unlockCost": 0, "showType": 0, "isExitLadder": false }
+			],
+			"enemyRefreshDatas": [],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [{ "roomId": 8800, "param": "", "pos": { "x": -471.35, "y": -1383.24 } }],
+			"survivorDatas": [],
+			"fightSoulDatas": []
+		},
+		{
+			"cfgId": 8811,
+			"layer": 2,
+			"pos": { "x": -1367.23, "y": -1093.22 },
+			"size": { "width": 700, "height": 380 },
+			"pathPointIds": ["P1_1", "P1_0"],
+			"unlockPointIds": ["P1_2"],
+			"doors": [],
+			"ladders": [],
+			"enemyRefreshDatas": [],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [{ "roomId": 8811, "param": "", "pos": { "x": -900.93, "y": -1010.83 } }],
+			"survivorDatas": [],
+			"fightSoulDatas": [{ "roomId": 8811, "weight": 0, "pos": { "x": -1085.18, "y": -1053.69 } }]
+		},
+		{
+			"cfgId": 8812,
+			"layer": 2,
+			"pos": { "x": -664.02, "y": -1097.34 },
+			"size": { "width": 700, "height": 380 },
+			"pathPointIds": ["P1_4", "P1_3", "P1_2"],
+			"unlockPointIds": [],
+			"doors": [{ "hp": 0, "roomId": 8812, "pos": { "x": -554.09, "y": -1063.81 } }],
+			"ladders": [],
+			"enemyRefreshDatas": [],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [{ "roomId": 8812, "param": "", "pos": { "x": -218.19, "y": -1013.48 } }],
+			"survivorDatas": [],
+			"fightSoulDatas": []
+		},
+		{
+			"cfgId": 8813,
+			"layer": 2,
+			"pos": { "x": 37.52, "y": -1093.14 },
+			"size": { "width": 700, "height": 380 },
+			"pathPointIds": ["P1_5"],
+			"unlockPointIds": ["P1_4"],
+			"doors": [{ "hp": 0, "roomId": 8813, "pos": { "x": 134.58, "y": -1065.61 } }],
+			"ladders": [],
+			"enemyRefreshDatas": [],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [{ "roomId": 8813, "param": "", "pos": { "x": 374.36, "y": -1011.48 } }],
+			"survivorDatas": [],
+			"fightSoulDatas": []
+		},
+		{
+			"cfgId": 8814,
+			"layer": 2,
+			"pos": { "x": 738.73, "y": -1091.14 },
+			"size": { "width": 700, "height": 380 },
+			"pathPointIds": ["P1_8", "P1_7", "P1_6"],
+			"unlockPointIds": [],
+			"doors": [{ "hp": 0, "roomId": 8814, "pos": { "x": 826.92, "y": -1063.27 } }],
+			"ladders": [
+				{ "roomId": 8814, "pos": { "x": 1185.85, "y": -1056.39 }, "bindPointIds": ["P1_7", "P2_1"], "unlockMethod": 0, "unlockCost": 0, "showType": 0, "isExitLadder": false }
+			],
+			"enemyRefreshDatas": [],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [{ "roomId": 8814, "param": "", "pos": { "x": 1051.77, "y": -1016.61 } }],
+			"survivorDatas": [],
+			"fightSoulDatas": []
+		},
+		{
+			"cfgId": 8815,
+			"layer": 3,
+			"pos": { "x": -1449.02, "y": -706.44 },
+			"size": { "width": 2900, "height": 380 },
+			"pathPointIds": ["P2_0", "P2_1", "P2_2"],
+			"unlockPointIds": [],
+			"doors": [],
+			"ladders": [],
+			"enemyRefreshDatas": [
+				{ "refreshId": 0, "param": "", "roomId": 8815, "pos": { "x": -1394.56, "y": -667.44 } },
+				{ "refreshId": 0, "param": "", "roomId": 8815, "pos": { "x": 1382, "y": -665.58 } }
+			],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [],
+			"survivorDatas": [],
+			"fightSoulDatas": [{ "roomId": 8815, "weight": 0, "pos": { "x": 1111.43, "y": -660.58 }, "isGuide": true }]
+		},
+		{
+			"cfgId": 8821,
+			"layer": 4,
+			"pos": { "x": -1449.49, "y": 172.88 },
+			"size": { "width": 770, "height": 380 },
+			"pathPointIds": ["P3_0", "P3_1", "P3_2", "P3_3"],
+			"unlockPointIds": ["P3_3"],
+			"doors": [{ "hp": 0, "roomId": 8821, "pos": { "x": -1266.43, "y": 206.48 } }],
+			"ladders": [],
+			"enemyRefreshDatas": [],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [
+				{ "roomId": 8821, "param": "", "pos": { "x": -948.2, "y": 269.41 } },
+				{ "roomId": 8821, "param": "", "pos": { "x": -853.54, "y": 273.08 } }
+			],
+			"survivorDatas": [{ "roomId": 8821, "weight": 0, "pos": { "x": -1116.05, "y": 229.95 } }],
+			"fightSoulDatas": []
+		},
+		{
+			"cfgId": 8822,
+			"layer": 4,
+			"pos": { "x": -670.55, "y": 176.55 },
+			"size": { "width": 700, "height": 380 },
+			"pathPointIds": ["P3_4", "P3_5"],
+			"unlockPointIds": [],
+			"doors": [{ "hp": 0, "roomId": 8822, "pos": { "x": -552.43, "y": 208.08 } }],
+			"ladders": [
+				{ "roomId": 8822, "pos": { "x": -334.42, "y": 222.61 }, "bindPointIds": ["P3_4", "P4_1"], "unlockMethod": 0, "unlockCost": 0, "showType": 0, "isExitLadder": false }
+			],
+			"enemyRefreshDatas": [],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [{ "roomId": 8822, "param": "", "pos": { "x": -198.06, "y": 266.61 } }],
+			"survivorDatas": [],
+			"fightSoulDatas": []
+		},
+		{
+			"cfgId": 8823,
+			"layer": 4,
+			"pos": { "x": 33.59, "y": 178.15 },
+			"size": { "width": 700, "height": 380 },
+			"pathPointIds": ["P3_6"],
+			"unlockPointIds": [],
+			"doors": [{ "hp": 0, "roomId": 8823, "pos": { "x": 134.25, "y": 207.08 } }],
+			"ladders": [],
+			"enemyRefreshDatas": [],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [{ "roomId": 8823, "param": "", "pos": { "x": 401.09, "y": 269.41 } }],
+			"survivorDatas": [],
+			"fightSoulDatas": []
+		},
+		{
+			"cfgId": 8824,
+			"layer": 4,
+			"pos": { "x": 741.06, "y": 178.08 },
+			"size": { "width": 700, "height": 380 },
+			"pathPointIds": ["P3_7", "P3_8", "P3_9", "P3_10"],
+			"unlockPointIds": ["P3_7"],
+			"doors": [{ "hp": 0, "roomId": 8824, "pos": { "x": 826.65, "y": 209.55 } }],
+			"ladders": [],
+			"enemyRefreshDatas": [],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [{ "roomId": 8824, "param": "", "pos": { "x": 1001.1, "y": 269.14 } }],
+			"survivorDatas": [],
+			"fightSoulDatas": []
+		},
+		{
+			"cfgId": 8831,
+			"layer": 5,
+			"pos": { "x": -668.89, "y": 567.85 },
+			"size": { "width": 700, "height": 380 },
+			"pathPointIds": ["P4_0", "P4_1", "P4_2"],
+			"unlockPointIds": [],
+			"doors": [],
+			"ladders": [],
+			"enemyRefreshDatas": [{ "refreshId": 0, "param": "", "roomId": 8831, "pos": { "x": -563.96, "y": 613.98 } }],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [{ "roomId": 8831, "param": "", "pos": { "x": -189.46, "y": 658.18 } }],
+			"survivorDatas": [],
+			"fightSoulDatas": []
+		},
+		{
+			"cfgId": 8832,
+			"layer": 5,
+			"pos": { "x": 33.59, "y": 570.92 },
+			"size": { "width": 700, "height": 380 },
+			"pathPointIds": ["P4_3", "P4_4"],
+			"unlockPointIds": [],
+			"doors": [{ "hp": 0, "roomId": 8832, "pos": { "x": 136.64, "y": 603.45 } }],
+			"ladders": [],
+			"enemyRefreshDatas": [],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [{ "roomId": 8832, "param": "", "pos": { "x": 289.56, "y": 656.18 } }],
+			"survivorDatas": [],
+			"fightSoulDatas": []
+		},
+		{
+			"cfgId": 8841,
+			"layer": 6,
+			"pos": { "x": -640.36, "y": 2635.41 },
+			"size": { "width": 700, "height": 380 },
+			"pathPointIds": ["P5_0", "P5_1", "P5_2", "P5_3"],
+			"unlockPointIds": [],
+			"doors": [],
+			"ladders": [
+				{ "roomId": 8841, "pos": { "x": -428.22, "y": 2690.89 }, "bindPointIds": ["P5_1", "P6_1"], "unlockMethod": 0, "unlockCost": 0, "showType": 0, "isExitLadder": false }
+			],
+			"enemyRefreshDatas": [],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [{ "roomId": 8841, "param": "", "pos": { "x": -334.88, "y": 2732.45 } }],
+			"survivorDatas": [],
+			"fightSoulDatas": []
+		},
+		{
+			"cfgId": 8842,
+			"layer": 6,
+			"pos": { "x": 748.59, "y": 2639.87 },
+			"size": { "width": 700, "height": 380 },
+			"pathPointIds": ["P5_4", "P5_5", "P5_6", "P5_7"],
+			"unlockPointIds": ["P6_8"],
+			"doors": [],
+			"ladders": [
+				{ "roomId": 8842, "pos": { "x": 1313.74, "y": 2689.62 }, "bindPointIds": ["P5_6", "P6_8"], "unlockMethod": 0, "unlockCost": 0, "showType": 0, "isExitLadder": false }
+			],
+			"enemyRefreshDatas": [],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [
+				{ "roomId": 8842, "param": "", "pos": { "x": 921.51, "y": 2742.87 } },
+				{ "roomId": 8842, "param": "", "pos": { "x": 1004.17, "y": 2745.2 } }
+			],
+			"survivorDatas": [{ "roomId": 8842, "weight": 0, "pos": { "x": 1150.36, "y": 2698.67 } }],
+			"fightSoulDatas": []
+		},
+		{
+			"cfgId": 8851,
+			"layer": 7,
+			"pos": { "x": -641.36, "y": 3038.31 },
+			"size": { "width": 700, "height": 380 },
+			"pathPointIds": ["P6_0", "P6_1", "P6_2"],
+			"unlockPointIds": [],
+			"doors": [],
+			"ladders": [],
+			"enemyRefreshDatas": [],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [{ "roomId": 8851, "param": "", "pos": { "x": -164.87, "y": 3139.29 } }],
+			"survivorDatas": [],
+			"fightSoulDatas": [{ "roomId": 8851, "weight": 0, "pos": { "x": -270.59, "y": 3099.5 } }]
+		},
+		{
+			"cfgId": 8852,
+			"layer": 7,
+			"pos": { "x": 64.45, "y": 3038.37 },
+			"size": { "width": 700, "height": 380 },
+			"pathPointIds": ["P6_3", "P6_4"],
+			"unlockPointIds": ["P6_5"],
+			"doors": [{ "hp": 0, "roomId": 8852, "pos": { "x": 154.44, "y": 3081.24 } }],
+			"ladders": [],
+			"enemyRefreshDatas": [],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [{ "roomId": 8852, "param": "", "pos": { "x": 452.89, "y": 3138.43 } }],
+			"survivorDatas": [],
+			"fightSoulDatas": []
+		},
+		{
+			"cfgId": 8853,
+			"layer": 7,
+			"pos": { "x": 769.26, "y": 3039.11 },
+			"size": { "width": 680, "height": 380 },
+			"pathPointIds": ["P6_5", "P6_6", "P6_7", "P6_8", "P6_9"],
+			"unlockPointIds": [],
+			"doors": [{ "hp": 0, "roomId": 8853, "pos": { "x": 860.38, "y": 3080.24 } }],
+			"ladders": [
+				{ "roomId": 8853, "pos": { "x": 1219.55, "y": 3096.23 }, "bindPointIds": ["P6_7", "P7_5"], "unlockMethod": 0, "unlockCost": 0, "showType": 0, "isExitLadder": false }
+			],
+			"enemyRefreshDatas": [{ "refreshId": 0, "param": "", "roomId": 8853, "pos": { "x": 1396.14, "y": 3099.3 } }],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [{ "roomId": 8853, "param": "", "pos": { "x": 1078.83, "y": 3142.83 } }],
+			"survivorDatas": [],
+			"fightSoulDatas": []
+		},
+		{
+			"cfgId": 8861,
+			"layer": 8,
+			"pos": { "x": -1359.69, "y": 3424.94 },
+			"size": { "width": 700, "height": 380 },
+			"pathPointIds": ["P7_2", "P7_0", "P7_1"],
+			"unlockPointIds": ["P8_1"],
+			"doors": [],
+			"ladders": [
+				{ "roomId": 8861, "pos": { "x": -1129.96, "y": 3483.76 }, "bindPointIds": ["P7_1", "P8_1"], "unlockMethod": 0, "unlockCost": 0, "showType": 0, "isExitLadder": false }
+			],
+			"enemyRefreshDatas": [],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [{ "roomId": 8861, "param": "", "pos": { "x": -912.73, "y": 3527.53 } }],
+			"survivorDatas": [],
+			"fightSoulDatas": []
+		},
+		{
+			"cfgId": 8862,
+			"layer": 8,
+			"pos": { "x": -652.69, "y": 3424.54 },
+			"size": { "width": 2100, "height": 380 },
+			"pathPointIds": ["P7_3", "P7_4", "P7_5", "P7_6"],
+			"unlockPointIds": [],
+			"doors": [{ "hp": 0, "roomId": 8862, "pos": { "x": -538.9, "y": 3474 } }],
+			"ladders": [],
+			"enemyRefreshDatas": [],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [{ "roomId": 8862, "param": "", "pos": { "x": 571.62, "y": 3573.97 } }],
+			"survivorDatas": [],
+			"fightSoulDatas": []
+		},
+		{
+			"cfgId": 8871,
+			"layer": 9,
+			"pos": { "x": -1359.89, "y": 3814.64 },
+			"size": { "width": 700, "height": 380 },
+			"pathPointIds": ["P8_0", "P8_2", "P8_1"],
+			"unlockPointIds": [],
+			"doors": [],
+			"ladders": [],
+			"enemyRefreshDatas": [{ "refreshId": 0, "param": "", "roomId": 8871, "pos": { "x": -1214.11, "y": 3881.5 } }],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [{ "roomId": 8871, "param": "", "pos": { "x": -909.2, "y": 3920.36 } }],
+			"survivorDatas": [],
+			"fightSoulDatas": []
+		},
+		{
+			"cfgId": 8872,
+			"layer": 9,
+			"pos": { "x": -652.22, "y": 3814.57 },
+			"size": { "width": 700, "height": 380 },
+			"pathPointIds": ["P8_3", "P8_5", "P8_4"],
+			"unlockPointIds": [],
+			"doors": [{ "hp": 0, "roomId": 8872, "pos": { "x": -539.76, "y": 3866.64 } }],
+			"ladders": [
+				{ "roomId": 8872, "pos": { "x": -196.66, "y": 3876.37 }, "bindPointIds": ["P8_4", "P9_1"], "unlockMethod": 0, "unlockCost": 0, "showType": 0, "isExitLadder": false }
+			],
+			"enemyRefreshDatas": [],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [{ "roomId": 8872, "param": "", "pos": { "x": -366.98, "y": 3927.7 } }],
+			"survivorDatas": [],
+			"fightSoulDatas": []
+		},
+		{
+			"cfgId": 8873,
+			"layer": 9,
+			"pos": { "x": 53.98, "y": 3814.37 },
+			"size": { "width": 700, "height": 380 },
+			"pathPointIds": ["P8_6", "P8_7", "P8_8"],
+			"unlockPointIds": [],
+			"doors": [{ "hp": 0, "roomId": 8873, "pos": { "x": 156.78, "y": 3864.64 } }],
+			"ladders": [
+				{ "roomId": 8873, "pos": { "x": 600.54, "y": 3876.37 }, "bindPointIds": ["P8_7", "P9_5"], "unlockMethod": 0, "unlockCost": 0, "showType": 0, "isExitLadder": false }
+			],
+			"enemyRefreshDatas": [],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [{ "roomId": 8873, "param": "", "pos": { "x": 294.7, "y": 3927.43 } }],
+			"survivorDatas": [],
+			"fightSoulDatas": []
+		},
+		{
+			"cfgId": 8874,
+			"layer": 9,
+			"pos": { "x": 758.72, "y": 3812.17 },
+			"size": { "width": 690, "height": 380 },
+			"pathPointIds": ["P8_9", "P8_10", "P8_11"],
+			"unlockPointIds": [],
+			"doors": [{ "hp": 0, "roomId": 8874, "pos": { "x": 859.92, "y": 3865.7 } }],
+			"ladders": [],
+			"enemyRefreshDatas": [],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [{ "roomId": 8874, "param": "", "pos": { "x": 998.04, "y": 3917.56 } }],
+			"survivorDatas": [],
+			"fightSoulDatas": []
+		},
+		{
+			"cfgId": 8881,
+			"layer": 10,
+			"pos": { "x": -651.89, "y": 4205.07 },
+			"size": { "width": 700, "height": 380 },
+			"pathPointIds": ["P9_0", "P9_1", "P9_2", "P9_3"],
+			"unlockPointIds": ["P9_2"],
+			"doors": [],
+			"ladders": [],
+			"enemyRefreshDatas": [],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [
+				{ "roomId": 8881, "param": "", "pos": { "x": -445.64, "y": 4319.66 } },
+				{ "roomId": 8881, "param": "", "pos": { "x": -92.74, "y": 4322.13 } }
+			],
+			"survivorDatas": [],
+			"fightSoulDatas": [{ "roomId": 8881, "weight": 0, "pos": { "x": -310.12, "y": 4278.27 } }]
+		},
+		{
+			"cfgId": 8882,
+			"layer": 10,
+			"pos": { "x": 54.05, "y": 4205.2 },
+			"size": { "width": 700, "height": 380 },
+			"pathPointIds": ["P9_4", "P9_5", "P9_6", "P9_7"],
+			"unlockPointIds": ["P9_6", "P9_3"],
+			"doors": [{ "hp": 0, "roomId": 8882, "pos": { "x": 156.18, "y": 4255.33 } }],
+			"ladders": [
+				{ "roomId": 8882, "pos": { "x": 298.56, "y": 4274.72 }, "bindPointIds": ["P9_4", "P10_1"], "unlockMethod": 0, "unlockCost": 0, "showType": 0, "isExitLadder": false }
+			],
+			"enemyRefreshDatas": [],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [{ "roomId": 8882, "param": "", "pos": { "x": 439.35, "y": 4315.99 } }],
+			"survivorDatas": [],
+			"fightSoulDatas": []
+		},
+		{
+			"cfgId": 8891,
+			"layer": 11,
+			"pos": { "x": -489.64, "y": 4605.64 },
+			"size": { "width": 1000, "height": 380 },
+			"pathPointIds": ["P10_0", "P10_1", "P10_2"],
+			"unlockPointIds": [],
+			"doors": [],
+			"ladders": [],
+			"enemyRefreshDatas": [],
+			"enemyCreateDatas": [],
+			"baseItemDatas": [],
+			"searchItemDatas": [
+				{ "roomId": 8891, "param": "", "pos": { "x": 365.49, "y": 4701.43 } },
+				{ "roomId": 8891, "param": "", "pos": { "x": -227.86, "y": 4694.7 } }
+			],
+			"survivorDatas": [],
+			"fightSoulDatas": []
+		}
+	],
+	"playerCreatePos": { "x": 541.62, "y": 613.28 },
+	"playerExitPos": { "x": 194.99, "y": -664.93 },
+	"portalDatas": [
+		{ "linkId": "P0_2", "pos": { "x": -45.02, "y": 2691.37 }, "offsetX": 0, "portalType": 0, "animPIds": [] },
+		{ "linkId": "P5_2", "pos": { "x": -73.7, "y": -1441.41 }, "offsetX": 0, "portalType": 0, "animPIds": [] },
+		{ "linkId": "P3_9", "pos": { "x": 1344.87, "y": 3876.37 }, "offsetX": 0, "portalType": 0, "animPIds": [] },
+		{ "linkId": "P8_10", "pos": { "x": 1246.95, "y": 225.08 }, "offsetX": 0, "portalType": 0, "animPIds": [] }
+	],
+	"scooterDatas": [],
+	"rockDatas": [],
+	"areaInfo": [5, 11],
+	"commonControllerDatas": [
+		{
+			"id": 0,
+			"pos": {
+				"x": -296.418,
+				"y": 3523.336
+			},
+			"size": {
+				"width": 50,
+				"height": 150
+			},
+			"keySize": {
+				"width": 100,
+				"height": 200
+			},
+			"triggerEvent": "Level8_COLLISION",
+			"spine": "gui/battle/spines/scene/scene8/神像头机关/sxt_taiyang"
+		},
+		{
+			"id": 1,
+			"pos": {
+				"x": -120.366,
+				"y": 3523.336
+			},
+			"size": {
+				"width": 50,
+				"height": 150
+			},
+			"keySize": {
+				"width": 100,
+				"height": 200
+			},
+			"triggerEvent": "Level8_COLLISION",
+			"spine": "gui/battle/spines/scene/scene8/神像头机关/sxt_yueliang"
+		},
+		{
+			"id": 2,
+			"pos": {
+				"x": 36.339,
+				"y": 3523.336
+			},
+			"size": {
+				"width": 50,
+				"height": 150
+			},
+			"keySize": {
+				"width": 100,
+				"height": 200
+			},
+			"triggerEvent": "Level8_COLLISION",
+			"spine": "gui/battle/spines/scene/scene8/神像头机关/sxt_dushe"
+		},
+		{
+			"id": 3,
+			"pos": {
+				"x": 258.822,
+				"y": 3523.336
+			},
+			"size": {
+				"width": 50,
+				"height": 150
+			},
+			"keySize": {
+				"width": 100,
+				"height": 200
+			},
+			"triggerEvent": "Level8_COLLISION",
+			"spine": "gui/battle/spines/scene/scene8/神像头机关/sxt_fengshou"
+		}
+	]
+}
