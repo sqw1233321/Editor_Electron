@@ -37,7 +37,7 @@
                     "ID": "3",
                     "Name": "解锁类型",
                     "ClassPropertyName": "unlockType",
-                    "Type": "number",
+                    "Type": "dropDownNumber",
                     "DefaultValue": 0
                 },
                 {
@@ -330,7 +330,7 @@
                 {
                     "ID": "1",
                     "Name": "传送门类型",
-                    "ClassPropertyName": "uniqueType",
+                    "ClassPropertyName": "portalType",
                     "Type": "number",
                     "PERMISSIONS": "readonly",
                     "DefaultValue": 0
