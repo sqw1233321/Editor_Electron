@@ -154,7 +154,7 @@ function createWindow() {
 //写文件
 ipcMain.handle('write-file', async (event, fileName, content) => {
     const fs = require('fs');
-    const baseDir = path.join(`${__dirname}/mapDat/`, `${fileName}.json`);
+    const baseDir = path.join(`${__dirname}`, `${fileName}.json`);
     const fullPath = path.resolve(baseDir);
     console.log('尝试写入完整路径:', fullPath);
     try {
@@ -206,9 +206,8 @@ ipcMain.handle('create-file', async (event, fileName, jsonContent) => {
     return { success: true, path: fullPath };
 });
 
-//写入文件(ex:'editorMap.json')
+//获取文件(ex:'editorMap.json')
 ipcMain.handle('get-file', async (event, filePath) => {
-    console.log(filePath);
     const fs = require('fs');
     const fullPath = path.join(__dirname, filePath);
     try {
@@ -218,6 +217,28 @@ ipcMain.handle('get-file', async (event, filePath) => {
         return { success: false, error: error.message };
     }
 })
+
+//获取文件夹下所有文件
+ipcMain.handle('get-folder', async (event, folderPath) => {
+    const fs = require('fs');
+    const path = require('path');
+    const fullPath = path.join(__dirname, folderPath);
+    try {
+        const files = fs.readdirSync(fullPath);
+        const jsonFiles = files.filter(file => file.endsWith('.json'));
+        const results = jsonFiles.map(fileName => {
+            const filePath = path.join(fullPath, fileName);
+            const content = fs.readFileSync(filePath, 'utf-8');
+            return {
+                name: path.basename(fileName, '.json'),
+                json: JSON.parse(content),
+            };
+        });
+        return { success: true, data: results };
+    } catch (error) {
+        return { success: false, error: error.message };
+    }
+});
 
 // ==================== 图集相关 IPC ====================
 

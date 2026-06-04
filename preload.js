@@ -5,6 +5,7 @@ contextBridge.exposeInMainWorld('electronAPI', {
   openFileDialog: () => ipcRenderer.invoke('open-file-dialog'),
   createFile: (fileName, jsonContent) => ipcRenderer.invoke('create-file', fileName, jsonContent),
   readFile: (filePath) => ipcRenderer.invoke('get-file', filePath),
+  readFolder: (folderPath) => ipcRenderer.invoke('get-folder', folderPath),
   selectAtlasFolder: () => ipcRenderer.invoke('select-atlas-folder'),
   saveEditorMapJson: (jsonContent) => ipcRenderer.invoke('save-editor-map-json', jsonContent),
   readEditorMapJson: () => ipcRenderer.invoke('read-editor-map-json'),

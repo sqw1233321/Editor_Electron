@@ -4,6 +4,14 @@
             "ClassName": "Room",
             "Properties": [
                 {
+                    "ID": "0",
+                    "Name": "描述",
+                    "ClassPropertyName": "name",
+                    "ExcelName": "AreaBase",
+                    "Type": "string",
+                    "DefaultValue": ""
+                },
+                {
                     "ID": "1",
                     "Name": "配置名称",
                     "ClassPropertyName": "cfgId",
@@ -37,6 +45,7 @@
                     "ID": "3",
                     "Name": "解锁类型",
                     "ClassPropertyName": "unlockType",
+                    "ExcelName": "AreaBase",
                     "Type": "dropDownNumber",
                     "DefaultValue": 0
                 },
@@ -44,6 +53,7 @@
                     "ID": "4",
                     "Condition": "3=1",
                     "Name": "前置房间id",
+                    "ExcelName": "AreaBase",
                     "ClassPropertyName": "unlockNeed",
                     "Type": "number",
                     "DefaultValue": 0
@@ -52,6 +62,7 @@
                     "ID": "5",
                     "Condition": "3=2",
                     "Name": "糯米个数",
+                    "ExcelName": "AreaBase",
                     "ClassPropertyName": "unlockNeed",
                     "Type": "number",
                     "DefaultValue": 0
@@ -60,32 +71,10 @@
                     "ID": "6",
                     "Condition": "3=11",
                     "Name": "解锁道具",
-                    "ClassPropertyName": "unlockRewards",
-                    "Type": "array",
-                    "DefaultValue": [],
-                    "Properties": [
-                        {
-                            "ID": "6-1",
-                            "Type": "object",
-                            "DefaultValue": {},
-                            "Properties": [
-                                {
-                                    "ID": "6-1-1",
-                                    "Name": "道具Id",
-                                    "ClassPropertyName": "rewardId",
-                                    "Type": "number",
-                                    "DefaultValue": -1
-                                },
-                                {
-                                    "ID": "6-1-2",
-                                    "Name": "个数",
-                                    "ClassPropertyName": "rewardCount",
-                                    "Type": "number",
-                                    "DefaultValue": 0
-                                }
-                            ]
-                        }
-                    ]
+                    "ExcelName": "AreaBase",
+                    "ClassPropertyName": "unlockNeed",
+                    "Type": "number",
+                    "DefaultValue": -1
                 },
                 {
                     "ID": "7",
@@ -106,7 +95,9 @@
                 {
                     "ID": "8",
                     "Name": "怪物信息",
-                    "ClassPropertyName": "roomMonster",
+                    "ClassPropertyName": "startMonster",
+                    "ExcelName": "AreaMonster",
+                    "Split": "|",
                     "Type": "array",
                     "DefaultValue": [],
                     "Properties": [
@@ -114,6 +105,7 @@
                             "ID": "8-1",
                             "Type": "object",
                             "DefaultValue": {},
+                            "Split": "_",
                             "Properties": [
                                 {
                                     "ID": "8-1-1",
@@ -124,17 +116,17 @@
                                 },
                                 {
                                     "ID": "8-1-2",
-                                    "Name": "初始等级",
-                                    "ClassPropertyName": "monsterLv",
-                                    "Type": "number",
-                                    "DefaultValue": 1
-                                },
-                                {
-                                    "ID": "8-1-3",
                                     "Name": "数量",
                                     "ClassPropertyName": "monsterCount",
                                     "Type": "number",
                                     "DefaultValue": 0
+                                },
+                                {
+                                    "ID": "8-1-3",
+                                    "Name": "初始等级",
+                                    "ClassPropertyName": "monsterLv",
+                                    "Type": "number",
+                                    "DefaultValue": 1
                                 }
                             ]
                         }
@@ -143,14 +135,16 @@
                 {
                     "ID": "9",
                     "Name": "探索后敌人等级加成",
-                    "ClassPropertyName": "addLv",
+                    "ClassPropertyName": "addLV",
+                    "ExcelName": "AreaBase",
                     "Type": "number",
                     "DefaultValue": 0
                 },
                 {
                     "ID": "10",
                     "Name": "是否是撤离房间",
-                    "ClassPropertyName": "outSide",
+                    "ClassPropertyName": "outside",
+                    "ExcelName": "AreaBase",
                     "Type": "boolean",
                     "DefaultValue": false
                 },
@@ -158,6 +152,7 @@
                     "ID": "11",
                     "Name": "是否是基础房间",
                     "ClassPropertyName": "baseArea",
+                    "ExcelName": "AreaBase",
                     "Type": "boolean",
                     "DefaultValue": false
                 }
@@ -168,7 +163,7 @@
             "Properties": [
                 {
                     "ID": "1",
-                    "Name": "房间id",
+                    "Name": "房间id(不可手动修改)",
                     "ClassPropertyName": "roomId",
                     "Type": "number",
                     "PERMISSIONS": "readonly",
@@ -245,6 +240,30 @@
                     "ClassPropertyName": "isExitLadder",
                     "Type": "boolean",
                     "DefaultValue": false
+                },
+                {
+                    "ID": "4",
+                    "Name": "解锁方法（禁用）",
+                    "PERMISSIONS": "readonly",
+                    "ClassPropertyName": "unlockMethod",
+                    "Type": "number",
+                    "DefaultValue": 0
+                },
+                {
+                    "ID": "5",
+                    "Name": "解锁消耗（禁用）",
+                    "PERMISSIONS": "readonly",
+                    "ClassPropertyName": "unlockCost",
+                    "Type": "number",
+                    "DefaultValue": 0
+                },
+                {
+                    "ID": "6",
+                    "Name": "显示类型（禁用）",
+                    "PERMISSIONS": "readonly",
+                    "ClassPropertyName": "showType",
+                    "Type": "number",
+                    "DefaultValue": 0
                 }
             ]
         },
@@ -321,6 +340,13 @@
                     "ClassPropertyName": "weight",
                     "Type": "number",
                     "DefaultValue": 0
+                },
+                {
+                    "ID": "3",
+                    "Name": "教程战魂",
+                    "ClassPropertyName": "isGuide",
+                    "Type": "boolean",
+                    "DefaultValue": false
                 }
             ]
         },
