@@ -25,6 +25,7 @@ const editorPath = "cocos/web-desktop"
 //加载
 app.whenReady().then(async () => {
     const isDebug = process.env.IS_DEBUG === 'true';
+    console.log("isDebug ", isDebug);
     //debug模式不拉去服务器包,本地包用来调试
     if (!isDebug) {
         await hotUpdate();
@@ -209,11 +210,14 @@ ipcMain.handle('create-file', async (event, fileName, jsonContent) => {
 //获取文件(ex:'editorMap.json')
 ipcMain.handle('get-file', async (event, filePath) => {
     const fs = require('fs');
-    const fullPath = path.join(__dirname, filePath);
+    const fullPath = path.join(__dirname, `${filePath}.json`);
+    console.log("readFile ", fullPath);
     try {
         const content = fs.readFileSync(fullPath, 'utf-8');
+        console.log("readFile success !!!", fullPath);
         return { success: true, content };
     } catch (error) {
+        console.log("readFile error !!!", error.messag);
         return { success: false, error: error.message };
     }
 })
