@@ -3814,7 +3814,24 @@
             "enemyRefreshDatas": [],
             "enemyCreateDatas": [],
             "baseItemDatas": [],
-            "searchItemDatas": [],
+            "searchItemDatas": [
+                {
+                    "roomId": 746,
+                    "param": "",
+                    "pos": {
+                        "x": 909.2879,
+                        "y": 8268.639
+                    }
+                },
+                {
+                    "roomId": 746,
+                    "param": "",
+                    "pos": {
+                        "x": 1257.604,
+                        "y": 8268.002
+                    }
+                }
+            ],
             "survivorDatas": []
         },
         {
@@ -3930,7 +3947,17 @@
             "unlockPointIds": [],
             "doors": [],
             "ladders": [],
-            "enemyRefreshDatas": [],
+            "enemyRefreshDatas": [
+                {
+                    "refreshId": 6611,
+                    "param": "3",
+                    "roomId": 749,
+                    "pos": {
+                        "x": -1451.703,
+                        "y": 8942.366
+                    }
+                }
+            ],
             "enemyCreateDatas": [],
             "baseItemDatas": [],
             "searchItemDatas": [],
@@ -3948,28 +3975,10 @@
     "isNewStage": true,
     "portalDatas": [
         {
-            "linkId": "P7_3",
-            "pos": {
-                "x": 391.28,
-                "y": 84.356
-            },
-            "offsetX": 1000,
-            "portalType": 1
-        },
-        {
-            "linkId": "P9_7",
-            "pos": {
-                "x": 1304.425,
-                "y": 459.257
-            },
-            "offsetX": -100,
-            "portalType": 1
-        },
-        {
             "linkId": "P13_4",
             "pos": {
-                "x": -925.3240000000001,
-                "y": 4602.777
+                "x": 1288,
+                "y": 450
             },
             "offsetX": -100,
             "portalType": 1

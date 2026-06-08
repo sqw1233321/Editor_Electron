@@ -174,7 +174,7 @@
 		},
 		{
 			"id": "P1_8",
-			"roomId": 1113,
+			"roomId": 1114,
 			"pos": {
 				"x": 715.35,
 				"y": -1019.79
@@ -1024,7 +1024,8 @@
 			],
 			"unlockPointIds": [
 				"P1_10",
-				"P2_10"
+				"P2_10",
+				"P1_8"
 			],
 			"doors": [
 				{
@@ -1103,7 +1104,7 @@
 			"survivorDatas": [
 				{
 					"roomId": 1115,
-					"weight": 2,
+					"weight": 4,
 					"pos": {
 						"x": 262.57,
 						"y": 2992.53
@@ -1423,7 +1424,16 @@
 					}
 				}
 			],
-			"survivorDatas": [],
+			"survivorDatas": [
+				{
+					"roomId": 1125,
+					"weight": 5,
+					"pos": {
+						"x": -621.062,
+						"y": 3341.840
+					}
+				}
+			],
 			"fightSoulDatas": []
 		},
 		{
@@ -1457,7 +1467,16 @@
 					}
 				}
 			],
-			"survivorDatas": [],
+			"survivorDatas": [
+				{
+					"roomId": 1126,
+					"weight": 6,
+					"pos": {
+						"x": 772.3540,
+						"y": 3333.970
+					}
+				}
+			],
 			"fightSoulDatas": []
 		},
 		{
@@ -1527,7 +1546,16 @@
 					}
 				}
 			],
-			"survivorDatas": [],
+			"survivorDatas": [
+				{
+					"roomId": 1131,
+					"weight": 2,
+					"pos": {
+						"x": -410.684,
+						"y": -288.459
+					}
+				}
+			],
 			"fightSoulDatas": []
 		},
 		{
@@ -1625,7 +1653,16 @@
 					}
 				}
 			],
-			"survivorDatas": [],
+			"survivorDatas": [
+				{
+					"roomId": 1133,
+					"weight": 3,
+					"pos": {
+						"x": 1284.231,
+						"y": -298.990
+					}
+				}
+			],
 			"fightSoulDatas": []
 		},
 		{

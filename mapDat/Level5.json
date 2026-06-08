@@ -1,7 +1,7 @@
 {
     "size": {
-        "width": 8715,
-        "height": 3654
+        "width": 3480,
+        "height": 7807
     },
     "pathPoints": [
         {
@@ -919,8 +919,6 @@
     ],
     "rooms": [
         {
-            "uid": "1778574953870_mp2dlthq_n1pm",
-            "isManualSet": false,
             "cfgId": 501,
             "layer": 1,
             "pos": {
@@ -983,8 +981,6 @@
             "fightSoulDatas": []
         },
         {
-            "uid": "1778574953870_mp2dlthq_t7k0",
-            "isManualSet": false,
             "cfgId": 502,
             "layer": 1,
             "pos": {
@@ -1043,8 +1039,6 @@
             "fightSoulDatas": []
         },
         {
-            "uid": "1778574953870_mp2dlthq_4g0w",
-            "isManualSet": false,
             "cfgId": 503,
             "layer": 1,
             "pos": {
@@ -1108,8 +1102,6 @@
             "fightSoulDatas": []
         },
         {
-            "uid": "1778574953871_mp2dlthr_o1rt",
-            "isManualSet": false,
             "cfgId": 511,
             "layer": 2,
             "pos": {
@@ -1187,8 +1179,6 @@
             "fightSoulDatas": []
         },
         {
-            "uid": "1778574953871_mp2dlthr_7ttt",
-            "isManualSet": false,
             "cfgId": 512,
             "layer": 2,
             "pos": {
@@ -1253,8 +1243,6 @@
             "fightSoulDatas": []
         },
         {
-            "uid": "1778574953871_mp2dlthr_25kq",
-            "isManualSet": false,
             "cfgId": 513,
             "layer": 2,
             "pos": {
@@ -1314,8 +1302,6 @@
             "fightSoulDatas": []
         },
         {
-            "uid": "1778574953871_mp2dlthr_92bg",
-            "isManualSet": false,
             "cfgId": 514,
             "layer": 2,
             "pos": {
@@ -1431,8 +1417,6 @@
             ]
         },
         {
-            "uid": "1778574953871_mp2dlthr_gfhw",
-            "isManualSet": false,
             "cfgId": 521,
             "layer": 3,
             "pos": {
@@ -1486,8 +1470,6 @@
             "fightSoulDatas": []
         },
         {
-            "uid": "1778574953871_mp2dlthr_pst1",
-            "isManualSet": false,
             "cfgId": 522,
             "layer": 3,
             "pos": {
@@ -1547,8 +1529,6 @@
             "fightSoulDatas": []
         },
         {
-            "uid": "1778574953871_mp2dlthr_p8xm",
-            "isManualSet": false,
             "cfgId": 523,
             "layer": 3,
             "pos": {
@@ -1583,8 +1563,6 @@
             "fightSoulDatas": []
         },
         {
-            "uid": "1778574953872_mp2dlths_vwy2",
-            "isManualSet": false,
             "cfgId": 524,
             "layer": 3,
             "pos": {
@@ -1635,8 +1613,6 @@
             "fightSoulDatas": []
         },
         {
-            "uid": "1778574953872_mp2dlths_dhsl",
-            "isManualSet": false,
             "cfgId": 525,
             "layer": 3,
             "pos": {
@@ -1700,8 +1676,6 @@
             "fightSoulDatas": []
         },
         {
-            "uid": "1778574953872_mp2dlths_r6c4",
-            "isManualSet": false,
             "cfgId": 531,
             "layer": 4,
             "pos": {
@@ -1794,8 +1768,6 @@
             ]
         },
         {
-            "uid": "1778574953872_mp2dlths_mymj",
-            "isManualSet": false,
             "cfgId": 532,
             "layer": 4,
             "pos": {
@@ -1839,8 +1811,6 @@
             "fightSoulDatas": []
         },
         {
-            "uid": "1778574953872_mp2dlths_s8a3",
-            "isManualSet": false,
             "cfgId": 533,
             "layer": 4,
             "pos": {
@@ -1900,8 +1870,6 @@
             "fightSoulDatas": []
         },
         {
-            "uid": "1778574953873_mp2dltht_wwxc",
-            "isManualSet": false,
             "cfgId": 534,
             "layer": 4,
             "pos": {
@@ -1955,8 +1923,6 @@
             ]
         },
         {
-            "uid": "1778574953873_mp2dltht_6jlh",
-            "isManualSet": false,
             "cfgId": 535,
             "layer": 4,
             "pos": {
@@ -2011,8 +1977,6 @@
             "fightSoulDatas": []
         },
         {
-            "uid": "1778574953873_mp2dltht_hex7",
-            "isManualSet": false,
             "cfgId": 541,
             "layer": 5,
             "pos": {
@@ -2082,8 +2046,6 @@
             ]
         },
         {
-            "uid": "1778574953874_mp2dlthu_xv3l",
-            "isManualSet": false,
             "cfgId": 551,
             "layer": 6,
             "pos": {
@@ -2119,8 +2081,6 @@
             "fightSoulDatas": []
         },
         {
-            "uid": "1778574953874_mp2dlthu_9i62",
-            "isManualSet": false,
             "cfgId": 561,
             "layer": 7,
             "pos": {
@@ -2181,8 +2141,6 @@
             "fightSoulDatas": []
         },
         {
-            "uid": "1778574953874_mp2dlthu_zwb8",
-            "isManualSet": false,
             "cfgId": 571,
             "layer": 8,
             "pos": {
@@ -2234,8 +2192,6 @@
             "fightSoulDatas": []
         },
         {
-            "uid": "1778574953874_mp2dlthu_624w",
-            "isManualSet": false,
             "cfgId": 572,
             "layer": 8,
             "pos": {
@@ -2249,8 +2205,8 @@
             "pathPointIds": [
                 "P7_3",
                 "P7_4",
-                "P7_6",
-                "P7_5"
+                "P7_5",
+                "P7_6"
             ],
             "unlockPointIds": [
                 "P7_3",
@@ -2309,8 +2265,6 @@
             "fightSoulDatas": []
         },
         {
-            "uid": "1778574953875_mp2dlthv_ipvj",
-            "isManualSet": false,
             "cfgId": 581,
             "layer": 9,
             "pos": {
@@ -2322,9 +2276,9 @@
                 "height": 320
             },
             "pathPointIds": [
-                "P8_0",
                 "P8_1",
-                "P8_2"
+                "P8_2",
+                "P8_0"
             ],
             "unlockPointIds": [],
             "doors": [],
@@ -2345,7 +2299,17 @@
                     "isExitLadder": false
                 }
             ],
-            "enemyRefreshDatas": [],
+            "enemyRefreshDatas": [
+                {
+                    "refreshId": 0,
+                    "param": "2",
+                    "roomId": 581,
+                    "pos": {
+                        "x": -225.69,
+                        "y": 3693.5
+                    }
+                }
+            ],
             "enemyCreateDatas": [],
             "baseItemDatas": [],
             "searchItemDatas": [
@@ -2362,8 +2326,6 @@
             "fightSoulDatas": []
         },
         {
-            "uid": "1778574953875_mp2dlthv_8cxl",
-            "isManualSet": false,
             "cfgId": 582,
             "layer": 9,
             "pos": {
@@ -2375,10 +2337,10 @@
                 "height": 380
             },
             "pathPointIds": [
-                "P8_5",
-                "P8_4",
-                "P8_6",
                 "P8_3",
+                "P8_4",
+                "P8_5",
+                "P8_6",
                 "P8_7"
             ],
             "unlockPointIds": [
@@ -2396,17 +2358,7 @@
                 }
             ],
             "ladders": [],
-            "enemyRefreshDatas": [
-                {
-                    "refreshId": 0,
-                    "param": "2",
-                    "roomId": 582,
-                    "pos": {
-                        "x": 1014.17,
-                        "y": 3693.5
-                    }
-                }
-            ],
+            "enemyRefreshDatas": [],
             "enemyCreateDatas": [],
             "baseItemDatas": [],
             "searchItemDatas": [
@@ -2431,8 +2383,6 @@
             "fightSoulDatas": []
         },
         {
-            "uid": "1778574953875_mp2dlthv_9nc8",
-            "isManualSet": false,
             "cfgId": 591,
             "layer": 10,
             "pos": {
@@ -2476,8 +2426,6 @@
             "fightSoulDatas": []
         },
         {
-            "uid": "1778574953876_mp2dlthw_w796",
-            "isManualSet": false,
             "cfgId": 592,
             "layer": 10,
             "pos": {

@@ -1,7 +1,7 @@
 {
     "size": {
-        "width": 8715,
-        "height": 3654
+        "width": 2906,
+        "height": 7654
     },
     "pathPoints": [
         {
@@ -1241,7 +1241,7 @@
             "unlockPointIds": [],
             "doors": [
                 {
-                    "hp": 1500,
+                    "hp": 0,
                     "roomId": 621,
                     "pos": {
                         "x": -518.69,
@@ -2766,6 +2766,7 @@
     "createArea": 2,
     "cableDatas": [
         {
+            "id": 1,
             "startPos": {
                 "x": -940,
                 "y": 2625
@@ -2784,8 +2785,14 @@
                     "y": 1700
                 }
             ],
-            "startSnapP": "P6_0",
-            "endSnapP": "P5_0",
+            "startSnapPs": [
+                "P6_0",
+                "P6_1"
+            ],
+            "endSnapPs": [
+                "P5_0",
+                "P5_1"
+            ],
             "speed": 150
         }
     ],
@@ -2799,7 +2806,8 @@
             "params": {
                 "intervalTime": 5,
                 "hurt": 50,
-                "interactionTime": 3
+                "interactionTime": 3,
+                "orientation": 1
             }
         },
         {
@@ -2811,7 +2819,8 @@
             "params": {
                 "intervalTime": 5,
                 "hurt": 50,
-                "interactionTime": 3
+                "interactionTime": 3,
+                "orientation": 1
             }
         },
         {
@@ -2823,7 +2832,8 @@
             "params": {
                 "intervalTime": 5,
                 "hurt": 50,
-                "interactionTime": 3
+                "interactionTime": 3,
+                "orientation": 1
             }
         },
         {
@@ -2835,7 +2845,8 @@
             "params": {
                 "intervalTime": 5,
                 "hurt": 50,
-                "interactionTime": 3
+                "interactionTime": 3,
+                "orientation": 1
             }
         },
         {
@@ -2847,7 +2858,8 @@
             "params": {
                 "intervalTime": 5,
                 "hurt": 50,
-                "interactionTime": 3
+                "interactionTime": 3,
+                "orientation": 1
             }
         },
         {
@@ -2859,7 +2871,8 @@
             "params": {
                 "intervalTime": 5,
                 "hurt": 50,
-                "interactionTime": 3
+                "interactionTime": 3,
+                "orientation": 1
             }
         }
     ],
