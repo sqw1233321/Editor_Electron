@@ -203,7 +203,7 @@ ipcMain.handle('copy-files', async (event, sourcePath, destPath) => {
         // 去掉末尾斜杠并拼接完整路径
         const normalizedSource = sourcePath.replace(/[/\\]$/, ''); // 去掉末尾 / 或 \
         const fullSourcePath = path.join(__dirname, normalizedSource);
-        
+
         console.log('复制的文件夹游戏内路径:', fullSourcePath);
 
         if (!fs.existsSync(fullSourcePath)) {
@@ -223,7 +223,7 @@ ipcMain.handle('copy-files', async (event, sourcePath, destPath) => {
         // 递归复制文件夹
         function copyFolderRecursive(src, dst) {
             const entries = fs.readdirSync(src, { withFileTypes: true });
-            
+
             for (const entry of entries) {
                 const srcPath = path.join(src, entry.name);
                 const destPath = path.join(dst, entry.name);
@@ -420,19 +420,23 @@ ipcMain.handle('load-area-images', async (event, areaName) => {
         let images = [];
         const files = fs.readdirSync(areaDir);
         files.forEach(file => {
-            console.log('file', file);
             const fileDir = path.join(areaDir, file);
             const singleImages = [];
-            fs.readdirSync(fileDir).forEach(fileName => {
-                const fullPath = path.join(fileDir, fileName);  // 完整路径
-                console.log('filePath', fullPath);
-                const buffer = fs.readFileSync(fullPath);  // 使用完整路径
-                const base64 = buffer.toString('base64');
-                const ext = fileName.split('.').pop().toLowerCase();
-                const mimeType = ext === 'png' ? 'image/png' : 'image/jpeg';
+            fs.readdirSync(fileDir).forEach(subDir => {
+                const subDirPath = path.join(fileDir, subDir);
+                const base64Arr = [];
+                fs.readdirSync(subDirPath).forEach(fileName => {
+                    console.log("图片名: ",fileName);
+                    const fullPath = path.join(subDirPath, fileName);
+                    const buffer = fs.readFileSync(fullPath);
+                    const base64 = buffer.toString('base64');
+                    const ext = fileName.split('.').pop().toLowerCase();
+                    const mimeType = ext === 'png' ? 'image/png' : 'image/jpeg';
+                    base64Arr.push(`data:${mimeType};base64,${base64}`);
+                });
                 singleImages.push({
-                    name: fileName,  // 这里是 fileName，没问题
-                    data: `data:${mimeType};base64,${base64}`
+                    name: subDir,
+                    data: base64Arr
                 });
             });
             images.push(singleImages);
