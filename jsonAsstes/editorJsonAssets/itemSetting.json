@@ -214,6 +214,27 @@
         "script": "MapDrawPortal"
     },
     {
+        "ClassName": "Portal",
+        "uniqueType": 5,
+        "ExportName": "portalDatas",
+        "Name": "双向传送门",
+        "Color": "#0F0000",
+        "iconSize": [
+            50,
+            50
+        ],
+        "itemSize": [
+            50,
+            50
+        ],
+        "itemAnchor": [
+            0.5,
+            0.5
+        ],
+        "cameraGroupIndex": 0,
+        "script": "MapDrawPortal"
+    },
+    {
         "ClassName": "SluiceGate",
         "ExportName": "sluiceGateDatas",
         "Color": "#FF0000",

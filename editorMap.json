@@ -131,5 +131,19 @@
         "areaNumber": 2,
         "areaOffset": 4000,
         "areaSize": "2|2"
+    },
+    {
+        "mapDta": "Level105",
+        "mapBg": "恶魔城地图123",
+        "areaNumber": 3,
+        "areaOffset": 4000,
+        "areaSize": "2|2"
+    },
+    {
+        "mapDta": "Level95",
+        "mapBg": "恐怖游轮",
+        "areaNumber": 2,
+        "areaOffset": 4000,
+        "areaSize": "2|2"
     }
 ]

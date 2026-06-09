@@ -174,23 +174,107 @@ ipcMain.handle('write-file', async (event, fileName, content) => {
     }
 });
 
+// 复制文件
+//sourcePath: 游戏内路径
+//destPath: 绝对路径
+ipcMain.handle('copy-file', async (event, sourcePath, destPath) => {
+    const fs = require('fs');
+    const baseDir = path.join(`${__dirname}`, `${sourcePath}.json`);
+    const fullPath = path.resolve(baseDir);
+    console.log('复制的文件游戏内路径:', fullPath);
+    try {
+        const destDir = path.dirname(destPath);
+        if (!fs.existsSync(destDir)) {
+            fs.mkdirSync(destDir, { recursive: true });
+        }
+        fs.copyFileSync(sourcePath, destPath);
+        return { success: true, destPath };
+    } catch (error) {
+        console.log('复制文件失败:', error.message);
+        return { success: false, error: error.message };
+    }
+});
+// 复制文件夹下的所有文件到另一个绝对路径下
+// sourcePath: 游戏内路径（如 'assets/mapEditor/' 或 'assets/mapEditor'）
+// destPath: 绝对路径
+ipcMain.handle('copy-files', async (event, sourcePath, destPath) => {
+    const fs = require('fs');
+    try {
+        // 去掉末尾斜杠并拼接完整路径
+        const normalizedSource = sourcePath.replace(/[/\\]$/, ''); // 去掉末尾 / 或 \
+        const fullSourcePath = path.join(__dirname, normalizedSource);
+        
+        console.log('复制的文件夹游戏内路径:', fullSourcePath);
+
+        if (!fs.existsSync(fullSourcePath)) {
+            return { success: false, error: `源路径不存在: ${fullSourcePath}` };
+        }
+
+        const stats = fs.statSync(fullSourcePath);
+        if (!stats.isDirectory()) {
+            return { success: false, error: `源路径不是文件夹: ${fullSourcePath}` };
+        }
+
+        // 确保目标目录存在
+        if (!fs.existsSync(destPath)) {
+            fs.mkdirSync(destPath, { recursive: true });
+        }
+
+        // 递归复制文件夹
+        function copyFolderRecursive(src, dst) {
+            const entries = fs.readdirSync(src, { withFileTypes: true });
+            
+            for (const entry of entries) {
+                const srcPath = path.join(src, entry.name);
+                const destPath = path.join(dst, entry.name);
+
+                if (entry.isDirectory()) {
+                    if (!fs.existsSync(destPath)) {
+                        fs.mkdirSync(destPath, { recursive: true });
+                    }
+                    copyFolderRecursive(srcPath, destPath);
+                } else {
+                    fs.copyFileSync(srcPath, destPath);
+                    console.log(`复制文件: ${srcPath} -> ${destPath}`);
+                }
+            }
+        }
+
+        copyFolderRecursive(fullSourcePath, destPath);
+        console.log('文件夹复制完成:', fullSourcePath, '->', destPath);
+        return { success: true, destPath };
+
+    } catch (error) {
+        console.log('复制文件夹失败:', error.message);
+        return { success: false, error: error.message };
+    }
+});
+
 //打开文件选择
-ipcMain.handle('open-file-dialog', async () => {
+ipcMain.handle('open-file-dialog', async (event, filters, properties) => {
+    const defaultFilters = [{ name: 'All Files', extensions: ['*'] }];
+    const defaultProperties = ['openFile'];
     const result = await dialog.showOpenDialog({
-        properties: ['openFile'],
+        properties: properties || defaultProperties,
         defaultPath: path.join(__dirname, 'assets/mapDat'),
-        filters: [{ name: 'JSON Files', extensions: ['json'] }]
+        filters: filters || defaultFilters
     });
 
     if (result.canceled) {
         return { success: false };
     }
 
-    const filePath = result.filePaths[0];
     const fs = require('fs');
+    const filePath = result.filePaths[0];
+    const stats = fs.statSync(filePath);
+    const isDirectory = stats.isDirectory();
+
+    if (isDirectory) {
+        return { success: true, path: filePath, isDirectory: true };
+    }
+
     const content = fs.readFileSync(filePath, 'utf-8');
     const fileName = path.basename(filePath);
-
     return { success: true, path: filePath, content, fileName };
 });
 
@@ -243,6 +327,43 @@ ipcMain.handle('get-folder', async (event, folderPath) => {
         return { success: false, error: error.message };
     }
 });
+
+ipcMain.handle('jsonToExcel', async (event, jsonPath, excelPath) => {
+    // const fs = require('fs');
+    // const baseDir = path.join(`${__dirname}`, `${sourcePath}.json`);
+    // const fullPath = path.resolve(baseDir);
+    // console.log('复制的文件游戏内路径:', fullPath);
+    // try {
+    //     const destDir = path.dirname(destPath);
+    //     if (!fs.existsSync(destDir)) {
+    //         fs.mkdirSync(destDir, { recursive: true });
+    //     }
+    //     fs.copyFileSync(sourcePath, destPath);
+    //     return { success: true, destPath };
+    // } catch (error) {
+    //     console.log('复制文件失败:', error.message);
+    //     return { success: false, error: error.message };
+    // }
+});
+
+ipcMain.handle('excelToJson', async (event, excelPath, jsonPath) => {
+    // const fs = require('fs');
+    // const baseDir = path.join(`${__dirname}`, `${sourcePath}.json`);
+    // const fullPath = path.resolve(baseDir);
+    // console.log('复制的文件游戏内路径:', fullPath);
+    // try {
+    //     const destDir = path.dirname(destPath);
+    //     if (!fs.existsSync(destDir)) {
+    //         fs.mkdirSync(destDir, { recursive: true });
+    //     }
+    //     fs.copyFileSync(sourcePath, destPath);
+    //     return { success: true, destPath };
+    // } catch (error) {
+    //     console.log('复制文件失败:', error.message);
+    //     return { success: false, error: error.message };
+    // }
+});
+
 
 // ==================== 图集相关 IPC ====================
 

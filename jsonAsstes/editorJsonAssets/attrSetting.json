@@ -913,6 +913,14 @@
             "ClassName": "Portal",
             "Properties": [
                 {
+                    "ID": "0",
+                    "Condition": "1=5",
+                    "Name": "传送门ID",
+                    "ClassPropertyName": "id",
+                    "Type": "number",
+                    "DefaultValue": -1
+                },
+                {
                     "ID": "1",
                     "Name": "传送门类型",
                     "ClassPropertyName": "portalType",
@@ -922,6 +930,7 @@
                 },
                 {
                     "ID": "2",
+                    "Condition": "1!=5",
                     "Name": "连接点id",
                     "ClassPropertyName": "linkId",
                     "Type": "point",
@@ -929,13 +938,21 @@
                 },
                 {
                     "ID": "3",
+                    "Condition": "1=5",
+                    "Name": "连接传送门id",
+                    "ClassPropertyName": "linkPortalId",
+                    "Type": "number",
+                    "DefaultValue": -1
+                },
+                {
+                    "ID": "4",
                     "Name": "偏移x",
                     "ClassPropertyName": "offsetX",
                     "Type": "number",
                     "DefaultValue": 0
                 },
                 {
-                    "ID": "4",
+                    "ID": "5",
                     "Name": "辅助动画点",
                     "ClassPropertyName": "animPIds",
                     "Type": "pointArray",
