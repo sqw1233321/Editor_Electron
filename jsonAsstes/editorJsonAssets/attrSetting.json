@@ -761,6 +761,13 @@
                     "ClassPropertyName": "hp",
                     "Type": "number",
                     "DefaultValue": 0
+                },
+                {
+                    "ID": "3",
+                    "Name": "门的类型",
+                    "ClassPropertyName": "doorType",
+                    "Type": "dropDownNumber",
+                    "DefaultValue": 0
                 }
             ]
         },
