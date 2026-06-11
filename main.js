@@ -328,6 +328,27 @@ ipcMain.handle('get-folder', async (event, folderPath) => {
     }
 });
 
+// 读取单张图片，传入相对路径，返回 base64
+ipcMain.handle('load-single-image', async (event, relativePath) => {
+    const fs = require('fs');
+    const imagePath = path.join(__dirname, relativePath);
+    try {
+        if (!fs.existsSync(imagePath)) {
+            return { success: false, error: `图片不存在: ${imagePath}` };
+        }
+        const buffer = fs.readFileSync(imagePath);
+        const base64 = buffer.toString('base64');
+        const ext = imagePath.split('.').pop().toLowerCase();
+        const mimeType = ext === 'png' ? 'image/png' : 'image/jpeg';
+        return {
+            success: true,
+            data: `data:${mimeType};base64,${base64}`
+        };
+    } catch (error) {
+        return { success: false, error: error.message };
+    }
+});
+
 ipcMain.handle('jsonToExcel', async (event, jsonPath, excelPath) => {
     // const fs = require('fs');
     // const baseDir = path.join(`${__dirname}`, `${sourcePath}.json`);
@@ -426,7 +447,7 @@ ipcMain.handle('load-area-images', async (event, areaName) => {
                 const subDirPath = path.join(fileDir, subDir);
                 const base64Arr = [];
                 fs.readdirSync(subDirPath).forEach(fileName => {
-                    console.log("图片名: ",fileName);
+                    console.log("图片名: ", fileName);
                     const fullPath = path.join(subDirPath, fileName);
                     const buffer = fs.readFileSync(fullPath);
                     const base64 = buffer.toString('base64');
