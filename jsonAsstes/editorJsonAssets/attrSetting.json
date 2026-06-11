@@ -1076,6 +1076,220 @@
         {
             "ClassName": "Lava",
             "Properties": []
+        },
+        {
+            "ClassName": "MultiPortalController",
+            "Properties": [
+                {
+                    "ID": "1",
+                    "Name": "传送门组",
+                    "ClassPropertyName": "groups",
+                    "Type": "object",
+                    "DefaultValue": {},
+                    "Properties": [
+                        {
+                            "ID": "1-1",
+                            "Name": "传送门id1",
+                            "ClassPropertyName": "start",
+                            "Type": "number",
+                            "DefaultValue": -1
+                        },
+                        {
+                            "ID": "1-2",
+                            "Name": "传送门id2",
+                            "ClassPropertyName": "end",
+                            "Type": "number",
+                            "DefaultValue": -1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ClassName": "CommonController",
+            "Properties": [
+                {
+                    "ID": "0",
+                    "Name": "控制器id",
+                    "ClassPropertyName": "id",
+                    "Type": "number",
+                    "DefaultValue": 0
+                },
+                {
+                    "ID": "1",
+                    "Name": "传送门组",
+                    "ClassPropertyName": "groups",
+                    "Type": "object",
+                    "DefaultValue": {},
+                    "Properties": [
+                        {
+                            "ID": "1-1",
+                            "Name": "传送门id1",
+                            "ClassPropertyName": "start",
+                            "Type": "number",
+                            "DefaultValue": -1
+                        },
+                        {
+                            "ID": "1-2",
+                            "Name": "传送门id2",
+                            "ClassPropertyName": "end",
+                            "Type": "number",
+                            "DefaultValue": -1
+                        }
+                    ]
+                },
+                {
+                    "ID": "2",
+                    "Name": "尺寸",
+                    "ClassPropertyName": "size",
+                    "Type": "object",
+                    "DefaultValue": {},
+                    "Properties": [
+                        {
+                            "ID": "2-1",
+                            "Name": "宽",
+                            "ClassPropertyName": "width",
+                            "Type": "number",
+                            "DefaultValue": 700
+                        },
+                        {
+                            "ID": "2-2",
+                            "Name": "高",
+                            "ClassPropertyName": "height",
+                            "Type": "number",
+                            "DefaultValue": 320
+                        }
+                    ]
+                },
+                {
+                    "ID": "3",
+                    "Name": "检测区域大小",
+                    "ClassPropertyName": "keySize",
+                    "Type": "object",
+                    "DefaultValue": {},
+                    "Properties": [
+                        {
+                            "ID": "2-1",
+                            "Name": "宽",
+                            "ClassPropertyName": "width",
+                            "Type": "number",
+                            "DefaultValue": 700
+                        },
+                        {
+                            "ID": "2-2",
+                            "Name": "高",
+                            "ClassPropertyName": "height",
+                            "Type": "number",
+                            "DefaultValue": 320
+                        }
+                    ]
+                },
+                {
+                    "ID": "4",
+                    "Name": "触发事件名称",
+                    "ClassPropertyName": "triggerEvent",
+                    "Type": "string",
+                    "DefaultValue": ""
+                },
+                {
+                    "ID": "5",
+                    "Name": "显示类型",
+                    "ClassPropertyName": "showType",
+                    "Type": "dropDownNumber",
+                    "DefaultValue": 0
+                },
+                {   
+                    "Condition": "5=0",
+                    "ID": "6",
+                    "Name": "图片路径",
+                    "ClassPropertyName": "icon",
+                    "Type": "selectFile",
+                    "DefaultValue": ""
+                },
+                {
+                    "Condition": "5=1",
+                    "ID": "7",
+                    "Name": "动画路径",
+                    "ClassPropertyName": "spine",
+                    "Type": "selectFile",
+                    "DefaultValue": ""
+                },
+                {
+                    "ID": "8",
+                    "Name": "是否是一次性",
+                    "ClassPropertyName": "onlyOnce",
+                    "Type": "boolean",
+                    "DefaultValue": false
+                },
+                {
+                    "ID": "9",
+                    "Name": "自定义字段",
+                    "ClassPropertyName": "params",
+                    "Type": "string",
+                    "DefaultValue": ""
+                }
+            ]
+        },
+        {
+            "ClassName": "Gate",
+            "Properties": [
+                {
+                    "ID": "0",
+                    "Name": "闸门id",
+                    "ClassPropertyName": "id",
+                    "Type": "number",
+                    "DefaultValue": 0
+                },
+                {
+                    "ID": "1",
+                    "Name": "锁定点",
+                    "ClassPropertyName": "lockPoint",
+                    "Type": "point",
+                    "DefaultValue": ""
+                },
+                {
+                    "ID": "2",
+                    "Name": "音效资源名",
+                    "ClassPropertyName": "audioEffect",
+                    "Type": "selectFile",
+                    "DefaultValue": ""
+                },
+                {
+                    "ID": "3",
+                    "Name": "动画资源名",
+                    "ClassPropertyName": "spine",
+                    "Type": "selectFile",
+                    "DefaultValue": ""
+                },
+                {
+                    "ID": "5",
+                    "Name": "运行动画名称",
+                    "ClassPropertyName": "openAnimName",
+                    "Type": "string",
+                    "DefaultValue": ""
+                },
+                {
+                    "ID": "6",
+                    "Name": "打开状态动画名称",
+                    "ClassPropertyName": "openDefaultAnimName",
+                    "Type": "string",
+                    "DefaultValue": ""
+                },
+                {
+                    "ID": "7",
+                    "Name": "关闭状态动画名称",
+                    "ClassPropertyName": "closeDefaultAnimName",
+                    "Type": "string",
+                    "DefaultValue": ""
+                },
+                {
+                    "ID": "8",
+                    "Name": "接收控制器事件",
+                    "ClassPropertyName": "closeDefaultAnimName",
+                    "Type": "string",
+                    "DefaultValue": ""
+                }
+            ]
         }
     ]
 }

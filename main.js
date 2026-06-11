@@ -349,6 +349,48 @@ ipcMain.handle('load-single-image', async (event, relativePath) => {
     }
 });
 
+// 读取动画spine文件夹，返回 json、png、atlas 三个文件
+ipcMain.handle('load-single-spine', async (event, relativePath) => {
+    const fs = require('fs');
+    const folderPath = path.join(__dirname, relativePath);
+    console.log("加载动画开始")
+    try {
+        if (!fs.existsSync(folderPath)) {
+            return { success: false, error: `文件夹不存在: ${folderPath}` };
+        }
+        const files = fs.readdirSync(folderPath);
+
+        let jsonData = null;
+        let pngData = null;
+        let atlasData = null;
+        for (const file of files) {
+            const filePath = path.join(folderPath, file);
+            const ext = file.split('.').pop().toLowerCase();
+
+            if (ext === 'json') {
+                jsonData = fs.readFileSync(filePath, 'utf-8');
+            } else if (ext === 'png') {
+                const buffer = fs.readFileSync(filePath);
+                pngData = `data:image/png;base64,${buffer.toString('base64')}`;
+            } else if (ext === 'atlas') {
+                atlasData = fs.readFileSync(filePath, 'utf-8');
+            }
+        }
+        if (!jsonData || !pngData || !atlasData) {
+            return { success: false, error: `缺少必要文件(json/png/atlas), 找到: ${files.join(', ')}` };
+        }
+        return {
+            success: true,
+            json: jsonData,
+            png: pngData,
+            atlas: atlasData
+        };
+    } catch (error) {
+        return { success: false, error: error.message };
+    }
+});
+
+
 ipcMain.handle('jsonToExcel', async (event, jsonPath, excelPath) => {
     // const fs = require('fs');
     // const baseDir = path.join(`${__dirname}`, `${sourcePath}.json`);
