@@ -1015,7 +1015,6 @@
             "Properties": [
                 {
                     "ID": "0",
-                    "Condition": "1=5",
                     "Name": "传送门ID",
                     "ClassPropertyName": "id",
                     "Type": "number",
@@ -1031,7 +1030,6 @@
                 },
                 {
                     "ID": "2",
-                    "Condition": "1!=5",
                     "Name": "连接点id",
                     "ClassPropertyName": "linkId",
                     "Type": "point",
@@ -1039,21 +1037,13 @@
                 },
                 {
                     "ID": "3",
-                    "Condition": "1=5",
-                    "Name": "连接传送门id",
-                    "ClassPropertyName": "linkPortalId",
-                    "Type": "number",
-                    "DefaultValue": -1
-                },
-                {
-                    "ID": "4",
                     "Name": "偏移x",
                     "ClassPropertyName": "offsetX",
                     "Type": "number",
                     "DefaultValue": 0
                 },
                 {
-                    "ID": "5",
+                    "ID": "4",
                     "Name": "辅助动画点",
                     "ClassPropertyName": "animPIds",
                     "Type": "pointArray",
@@ -1084,22 +1074,29 @@
                     "ID": "1",
                     "Name": "传送门组",
                     "ClassPropertyName": "groups",
-                    "Type": "object",
-                    "DefaultValue": {},
+                    "Type": "array",
+                    "DefaultValue": [],
                     "Properties": [
                         {
                             "ID": "1-1",
-                            "Name": "传送门id1",
-                            "ClassPropertyName": "start",
-                            "Type": "number",
-                            "DefaultValue": -1
-                        },
-                        {
-                            "ID": "1-2",
-                            "Name": "传送门id2",
-                            "ClassPropertyName": "end",
-                            "Type": "number",
-                            "DefaultValue": -1
+                            "Type": "object",
+                            "DefaultValue": {},
+                            "Properties": [
+                                {
+                                    "ID": "1-1-1",
+                                    "ClassPropertyName": "start",
+                                    "Name": "传送门id1",
+                                    "Type": "number",
+                                    "DefaultValue": -1
+                                },
+                                {
+                                    "ID": "1-1-2",
+                                    "ClassPropertyName": "end",
+                                    "Name": "传送门id2",
+                                    "Type": "number",
+                                    "DefaultValue": -1
+                                }
+                            ]
                         }
                     ]
                 }
