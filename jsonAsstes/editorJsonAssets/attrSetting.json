@@ -1116,29 +1116,6 @@
                     "DefaultValue": 0
                 },
                 {
-                    "ID": "1",
-                    "Name": "传送门组",
-                    "ClassPropertyName": "groups",
-                    "Type": "object",
-                    "DefaultValue": {},
-                    "Properties": [
-                        {
-                            "ID": "1-1",
-                            "Name": "传送门id1",
-                            "ClassPropertyName": "start",
-                            "Type": "number",
-                            "DefaultValue": -1
-                        },
-                        {
-                            "ID": "1-2",
-                            "Name": "传送门id2",
-                            "ClassPropertyName": "end",
-                            "Type": "number",
-                            "DefaultValue": -1
-                        }
-                    ]
-                },
-                {
                     "ID": "2",
                     "Name": "尺寸",
                     "ClassPropertyName": "size",
@@ -1198,7 +1175,7 @@
                     "Type": "dropDownNumber",
                     "DefaultValue": 0
                 },
-                {   
+                {
                     "Condition": "5=0",
                     "ID": "6",
                     "Name": "图片路径",
@@ -1243,9 +1220,17 @@
                 {
                     "ID": "1",
                     "Name": "锁定点",
-                    "ClassPropertyName": "lockPoint",
-                    "Type": "point",
-                    "DefaultValue": ""
+                    "ClassPropertyName": "lockPoints",
+                    "Type": "pointArray",
+                    "DefaultValue": [],
+                    "Properties": [
+                        {
+                            "ID": "1-1",
+                            "Type": "string",
+                            "PERMISSIONS": "readonly",
+                            "DefaultValue": ""
+                        }
+                    ]
                 },
                 {
                     "ID": "2",
@@ -1285,7 +1270,7 @@
                 {
                     "ID": "8",
                     "Name": "接收控制器事件",
-                    "ClassPropertyName": "closeDefaultAnimName",
+                    "ClassPropertyName": "controllerEvent",
                     "Type": "string",
                     "DefaultValue": ""
                 }
