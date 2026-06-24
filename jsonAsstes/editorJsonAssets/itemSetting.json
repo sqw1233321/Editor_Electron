@@ -53,6 +53,7 @@
             0.5,
             0
         ],
+        "script": "MapDrawDoor",
         "cameraGroupIndex": 0
     },
     {
@@ -306,5 +307,51 @@
         ],
         "cameraGroupIndex": 0,
         "script": "MapDrawGate"
+    },
+    {
+        "ClassName": "Gate",
+        "ExportName": "gateDatas",
+        "Name": "闸门",
+        "Color": "#A52A2A",
+        "iconSize": [
+            50,
+            50
+        ],
+        "itemSize": [
+            70,
+            70
+        ],
+        "itemAnchor": [
+            0.5,
+            0.5
+        ],
+        "cameraGroupIndex": 0,
+        "script": "MapDrawGate"
+    },
+    {
+        "ClassName": "Scooter",
+        "ExportName": "scooterDatas",
+        "Name": "滑轮车",
+        "Texture": "scooter.png",
+        "iconScale": 0.076,
+        "itemScale": 1,
+        "itemAnchor": [
+            0.5,
+            0.5
+        ],
+        "cameraGroupIndex": 0
+    },
+    {
+        "ClassName": "Rock",
+        "ExportName": "rockDatas",
+        "Name": "落石",
+        "Texture": "rock.png",
+        "iconScale": 0.3,
+        "itemScale": 1,
+        "itemAnchor": [
+            0.5,
+            0.5
+        ],
+        "cameraGroupIndex": 0
     }
 ]
