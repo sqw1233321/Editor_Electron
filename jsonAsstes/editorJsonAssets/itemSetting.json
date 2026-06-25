@@ -353,5 +353,82 @@
             0.5
         ],
         "cameraGroupIndex": 0
+    },
+    {
+        "ClassName": "ControllerPortal",
+        "ExportName": "controllerPortal",
+        "Name": "控制器传送门",
+        "Color": "#A52A2A",
+        "iconSize": [
+            50,
+            50
+        ],
+        "itemSize": [
+            70,
+            70
+        ],
+        "itemAnchor": [
+            0.5,
+            0.5
+        ],
+        "cameraGroupIndex": 0
+    },
+    {
+        "ClassName": "ControllerPortal",
+        "ExportName": "controllerPortal",
+        "Name": "控制器传送门",
+        "Color": "#A52A2A",
+        "iconSize": [
+            50,
+            50
+        ],
+        "itemSize": [
+            70,
+            70
+        ],
+        "itemAnchor": [
+            0.5,
+            0.5
+        ],
+        "cameraGroupIndex": 0
+    },
+    {
+        "ClassName": "Quiver",
+        "ExportName": "quiverDatas",
+        "Name": "飞箭",
+        "Texture": "quiver.png",
+        "iconScale": 0.3,
+        "itemScale": 0.5,
+        "itemAnchor": [
+            0,
+            0.5
+        ],
+        "cameraGroupIndex": 0
+    },
+    {
+        "ClassName": "SpinningAxe",
+        "ExportName": "spinningAxeDatas",
+        "Name": "旋斧",
+        "Texture": "spinningAxe.jpg",
+        "iconScale": 0.3,
+        "itemScale": 0.7,
+        "itemAnchor": [
+            0.5,
+            0.5
+        ],
+        "cameraGroupIndex": 0
+    },
+    {
+        "ClassName": "Cable",
+        "ExportName": "cableDatas",
+        "Name": "电梯",
+        "Texture": "cable.png",
+        "iconScale": 0.076,
+        "itemScale": 1,
+        "itemAnchor": [
+            0.5,
+            0.5
+        ],
+        "cameraGroupIndex": 0
     }
 ]
