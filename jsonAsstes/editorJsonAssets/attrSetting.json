@@ -799,16 +799,16 @@
                     "Name": "是否是撤离房间",
                     "ClassPropertyName": "outside",
                     "ExcelName": "AreaBase",
-                    "Type": "boolean",
-                    "DefaultValue": false
+                    "Type": "booleanNumber",
+                    "DefaultValue": 0
                 },
                 {
                     "ID": "15",
                     "Name": "是否是基础房间",
                     "ClassPropertyName": "baseArea",
                     "ExcelName": "AreaBase",
-                    "Type": "boolean",
-                    "DefaultValue": false
+                    "Type": "booleanNumber",
+                    "DefaultValue": 1
                 }
             ]
         },
@@ -905,7 +905,7 @@
                     "ID": "3",
                     "Name": "是否是撤离梯子",
                     "ClassPropertyName": "isExitLadder",
-                    "Type": "boolean",
+                    "Type": "booleanType",
                     "DefaultValue": false
                 },
                 {
@@ -1012,7 +1012,7 @@
                     "ID": "3",
                     "Name": "教程战魂",
                     "ClassPropertyName": "isGuide",
-                    "Type": "boolean",
+                    "Type": "booleanType",
                     "DefaultValue": false
                 }
             ]
@@ -1199,7 +1199,7 @@
                     "ID": "8",
                     "Name": "是否是一次性",
                     "ClassPropertyName": "onlyOnce",
-                    "Type": "boolean",
+                    "Type": "booleanType",
                     "DefaultValue": false
                 },
                 {
