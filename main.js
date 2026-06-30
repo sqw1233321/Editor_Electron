@@ -356,8 +356,23 @@ ipcMain.handle('load-single-image', async (event, relativePath) => {
 // 读取动画spine文件夹，返回 json、png、atlas 三个文件
 ipcMain.handle('load-single-spine', async (event, relativePath) => {
     const fs = require('fs');
-    const folderPath = path.join(__dirname, relativePath);
-    console.log("加载动画开始")
+
+    // 统一正斜杠
+    let relative = relativePath.replace(/\\/g, '/');
+    // 去掉 texture/item/drawItem/ 前缀
+    relative = relative.replace(/^texture\/item\/drawItem\//, '');
+    // 去掉可能的 .json/.png/.atlas 后缀（兼容两种情况）
+    relative = relative.replace(/\.(json|png|atlas)$/i, '');
+
+    // 去掉最后一级（动画名），回到资源根目录
+    const lastSlash = relative.lastIndexOf('/');
+    const baseDir = lastSlash > 0 ? relative.substring(0, lastSlash) : relative;
+    const animName = lastSlash > 0 ? relative.substring(lastSlash + 1) : '';
+
+    const folderPath = path.join(__dirname, baseDir);
+    console.log('资源目录:', folderPath);
+    console.log('动画名:', animName);
+
     try {
         if (!fs.existsSync(folderPath)) {
             return { success: false, error: `文件夹不存在: ${folderPath}` };
@@ -368,6 +383,8 @@ ipcMain.handle('load-single-spine', async (event, relativePath) => {
         let pngData = null;
         let atlasData = null;
         for (const file of files) {
+            //去掉不重名的文件
+            if (file.split('.')[0] !== animName) return;
             const filePath = path.join(folderPath, file);
             const ext = file.split('.').pop().toLowerCase();
 
@@ -383,6 +400,7 @@ ipcMain.handle('load-single-spine', async (event, relativePath) => {
         if (!jsonData || !pngData || !atlasData) {
             return { success: false, error: `缺少必要文件(json/png/atlas), 找到: ${files.join(', ')}` };
         }
+
         return {
             success: true,
             json: jsonData,
