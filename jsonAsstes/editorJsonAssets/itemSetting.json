@@ -108,28 +108,36 @@
     {
         "ClassName": "SurviveDat",
         "ExportName": "survivorDatas",
-        "Texture": "survive.png",
+        "Spine": "survive/xingcunzhe_f",
         "Name": "游魂",
         "InRoom": true,
-        "iconScale": 0.15,
-        "itemScale": 0.25,
+        "iconScale": 0.25,
+        "itemScale": 0.35,
         "itemAnchor": [
             0.5,
             0
+        ],
+        "iconOffset": [
+            0,
+            -35
         ],
         "cameraGroupIndex": 0
     },
     {
         "ClassName": "FightSoul",
         "ExportName": "fightSoulDatas",
-        "Texture": "fightSoul.jpg",
+        "Spine": "fightSoul/hy",
         "Name": "战魂",
         "InRoom": true,
-        "iconScale": 0.12,
-        "itemScale": 0.2,
+        "iconScale": 0.55,
+        "itemScale": 1,
         "itemAnchor": [
             0.5,
             0
+        ],
+        "iconOffset": [
+            0,
+            -35
         ],
         "cameraGroupIndex": 0
     },
@@ -149,7 +157,7 @@
         ],
         "itemAnchor": [
             0.5,
-            0.5
+            0
         ],
         "cameraGroupIndex": 0,
         "script": "MapDrawPortal"
@@ -272,7 +280,7 @@
         "ExportName": "commonControllerDatas",
         "Name": "通用控制器",
         "Color": "#00FFFF",
-        "spine": "",
+        "Spine": "",
         "iconSize": [
             50,
             50
@@ -287,26 +295,6 @@
         ],
         "cameraGroupIndex": 0,
         "script": "MapDrawCommonController"
-    },
-    {
-        "ClassName": "Gate",
-        "ExportName": "gateDatas",
-        "Name": "闸门",
-        "Color": "#A52A2A",
-        "iconSize": [
-            50,
-            50
-        ],
-        "itemSize": [
-            70,
-            70
-        ],
-        "itemAnchor": [
-            0.5,
-            0.5
-        ],
-        "cameraGroupIndex": 0,
-        "script": "MapDrawGate"
     },
     {
         "ClassName": "Gate",
@@ -374,33 +362,15 @@
         "cameraGroupIndex": 0
     },
     {
-        "ClassName": "ControllerPortal",
-        "ExportName": "controllerPortal",
-        "Name": "控制器传送门",
-        "Color": "#A52A2A",
-        "iconSize": [
-            50,
-            50
-        ],
-        "itemSize": [
-            70,
-            70
-        ],
-        "itemAnchor": [
-            0.5,
-            0.5
-        ],
-        "cameraGroupIndex": 0
-    },
-    {
         "ClassName": "Quiver",
         "ExportName": "quiverDatas",
         "Name": "飞箭",
-        "Texture": "quiver.png",
+        "Spine": "quiver/jian",
+        "AnimationName": "attack",
         "iconScale": 0.3,
-        "itemScale": 0.5,
+        "itemScale": 1,
         "itemAnchor": [
-            0,
+            0.230844,
             0.5
         ],
         "cameraGroupIndex": 0
@@ -409,7 +379,8 @@
         "ClassName": "SpinningAxe",
         "ExportName": "spinningAxeDatas",
         "Name": "旋斧",
-        "Texture": "spinningAxe.jpg",
+        "Spine": "spineAxe/fuzi",
+        "AnimationName": "loop",
         "iconScale": 0.3,
         "itemScale": 0.7,
         "itemAnchor": [

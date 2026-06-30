@@ -1063,6 +1063,13 @@
                             "DefaultValue": ""
                         }
                     ]
+                },
+                {
+                    "ID": "5",
+                    "Name": "icon资源路径",
+                    "ClassPropertyName": "iconPath",
+                    "Type": "selectFile",
+                    "DefaultValue": ""
                 }
             ]
         },

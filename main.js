@@ -268,14 +268,18 @@ ipcMain.handle('open-file-dialog', async (event, filters, properties) => {
     const filePath = result.filePaths[0];
     const stats = fs.statSync(filePath);
     const isDirectory = stats.isDirectory();
-
     if (isDirectory) {
         return { success: true, path: filePath, isDirectory: true };
     }
-
+    const rootDir = __dirname;
+    let relativePath = path.relative(rootDir, filePath);
+    // 先把反斜杠全转成正斜杠
+    relativePath = relativePath.replace(/\\/g, '/');
+    // 再去掉 texture/item/drawItem/ 前缀  包含后缀名
+    relativePath = relativePath.replace(/^texture\/item\/drawItem\//, '');
     const content = fs.readFileSync(filePath, 'utf-8');
     const fileName = path.basename(filePath);
-    return { success: true, path: filePath, content, fileName };
+    return { success: true, path: relativePath, content, fileName };
 });
 
 // 新建文件（渲染进程传入文件名和JSON内容）
